@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<multimarker markers="9">
+  <marker patternId="1" patternSize="40" center="-56.2963,-56.2963" />
+  <marker patternId="21" patternSize="40" center="-56.2963,0" />
+  <marker patternId="41" patternSize="40" center="-56.2963,56.2963" />
+  <marker patternId="61" patternSize="40" center="0,-56.2963" />
+  <marker patternId="81" patternSize="40" center="0,0" />
+  <marker patternId="101" patternSize="40" center="0,56.2963" />
+  <marker patternId="121" patternSize="40" center="56.2963,-56.2963" />
+  <marker patternId="141" patternSize="40" center="56.2963,0" />
+  <marker patternId="161" patternSize="40" center="56.2963,56.2963" />
+</multimarker>

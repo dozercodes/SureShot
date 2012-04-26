@@ -1,0 +1,66 @@
+Goblin XNA Release Notes
+
+Version 4.0 (10/30/11)
+
+
+Updates:
+
+1. Rewrote the shadow mapping shader so that it works with multiple lights, and Point and Spot light
+   types in addition to Directional light. (Thanks to Janessa Det)
+
+2. Added AlphaTestShader that uses AlphaTestEffect for transparent textures and billboards. 
+
+3. Added support for playing SoundEffect in Sound class. 
+
+4. Added DebugShapeRenderer in GoblinXNA.Graphics to replace GoblinXNA.Graphics.LineManager3D and 
+   GoblinXNA.Shaders.Line3DShader. This way, it works on the Windows Mobile 7 as well since it doesn't
+   use a custom shader.
+
+5. Added LightNode.CastShadows property so that the programmer can specify whether a light node should
+   cast shadows.
+
+6. Added a support for calibrating cameras from a series of images in CameraCalibration project under
+   tools directory. This support will allow the user to calibrate various types of cameras not limited
+   to webcams (e.g., cameras on the phone, Kinect camera, regular photo camera, etc)
+
+7. Added capability to adjust the maximum number of bytes that can be transferred for each 
+   INetworkObject (including the length of its Identifier). It used to be 65535 (size of short), but 
+   now you can change it to the size of int or long to handle INetworkObject that needs to send
+   much larger data by changing INetworkHandler.TransferSizePerNetworkObject property. If you modify
+   this property, make sure to modify it on both ends (server and clients).
+
+8. Added Model.ContainsTransparency property. If you're loaded model's internal texture or material
+   contains transparency, set this to true. Otherwise, your model will be drawn with opaque colors
+   for optimization purposes.
+
+
+Bug Fixes:
+
+1. Fixed some issues in NullCapture.
+
+
+Changes:
+
+1. The following changes are made to enable integration of GoblinXNA with Silverlight and WPF:
+
+   (a) State.InitGoblin(GraphicsDeviceManger, ..., ...) signature has been changed to 
+   State.InitGoblin(IGraphicsDeviceService, ..., ...). Accordingly, State.Graphics is a type of 
+   IGraphicsDeviceService instead of GraphicsDeviceManager.
+
+   (b) Scene does NOT inherit GameComponent anymore, so you don't need to pass the Game instance to its
+   constructor anymore when initializing the scene class. This means that you MUST call scene.Update(..)
+   scene.Draw(..), and scene.Dispose(..) in each of the appropriate section in your code (e.g., 
+   call scene.Update(...) in your Game.Update(...) method).
+
+   (c) Scene.Update(...) method signatures are changed to (TimeSpan, TimeSpan, bool, bool), and this also
+   changes all the signature of all other classes that require Update method with GameTime parameter
+   (e.g., InputMapper, ParticleEffect, etc)
+
+2. Modified all tutorials, tools, and projects in accordance with the above change.
+
+3. In order to optimize the networking, we reduced significant amount of redundant buffer copying.
+   Due to this optimization, we have changed INetworkObject interface for Interpret(...) method.
+   Make sure that you only interpret the data within the given range starting at 'startIndex' with
+   the given 'length'.
+
+4. Changed the ClientDisconnected and ClientConnected signatures.

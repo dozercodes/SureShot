@@ -1,0 +1,9 @@
+The explosion.png, fire.png, and smoke.png files are from the Particle 3D tutorial found 
+on the XNA Creator's Club website (http://creators.xna.com/).
+
+The wedge_p1_diff_v1.tga file is from the XNA tutorial found in the MSDN website.
+
+The ShadowDistanceFadeoutMap.dds fiel is from the XNA Racing Game Start Kit 
+(http://www.xnaracinggame.com/)
+
+The checkerboard.jpg is from http://www.bandanaman.com/graphics/checkerboard_lg.jpg.

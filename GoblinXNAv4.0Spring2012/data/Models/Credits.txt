@@ -1,0 +1,4 @@
+The p1_wedge.fbx is from the XNA tutorial found on the MSDN website.
+
+The dude.fbx, head.tga, jacket.tga, pants.tga, and upBodyC.tga are from the 
+SkinnedModelAnimatition tutorial available on XNA Creators website.

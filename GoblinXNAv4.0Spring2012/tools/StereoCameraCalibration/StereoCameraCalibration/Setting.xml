@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GoblinXNASettings>
+  <!--Whether the application should run in full-screen. You should set this to true if you plan to perform the
+  field of view adjustments as well-->
+  <var name="IsFullScreen" value="False" />
+  
+  <!--The calibration file name of the left camera (calibrated using CameraCalibration tool)-->
+  <var name="LeftCameraCalibration" value="Wrap920_Left.xml" />
+  <!--The calibration file name of the right camera (calibrated using CameraCalibration tool)-->
+  <var name="RightCameraCalibration" value="Wrap920_Right.xml" />
+  <!--The calibration file name to be generated that contains stereo separation parameters-->
+  <var name="StereoCameraCalibration" value="Wrap920_Stereo.xml" />
+  <!--The calibration file name to be generated that contains field of view adjustments parameters-->
+  <var name="StereoCameraAdjustments" value="Wrap920_Adjustments.xml" />
+
+  <!--The camera device ID of the left camera-->
+  <var name="LeftCameraID" value="0" />
+  <!--The camera device ID of the right camera-->
+  <var name="RightCameraID" value="1" />
+
+  <!--The number of calibration images used for calculating the stereo separation-->
+  <var name="CalibrationCount" value="20" />
+  <!--The expected minimum distance between the two physical cameras embeded in the head-worn display in millimeters-->
+  <var name="ExpectedMinDistance" value="56" />
+  <!--The expected maximum distance between the two physical cameras embedded in the head-worn display in millimeters-->
+  <var name="ExpectedMaxDistance" value="62" />
+</GoblinXNASettings>

@@ -1,0 +1,3 @@
+The Victory.wav file is from the XNA Racing Game Starter Kit (http://www.xnaracinggame.com/)
+
+Most of other .wav files are from Royality free sound effect websites.

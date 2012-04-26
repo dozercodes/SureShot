@@ -1,0 +1,3 @@
+Content\DebugFont.xnb
+Content\Sample.xnb
+Content\MarkerImage_320x240.xnb

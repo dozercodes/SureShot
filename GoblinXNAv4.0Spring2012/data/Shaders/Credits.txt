@@ -1,0 +1,9 @@
+The ParticleEffect.fx file is from the Particle 3D tutorial found 
+on the XNA Creator's Club website (http://creators.xna.com/).
+
+The MultiLightShadowMap.fx shader is written by Janessa Det <jwd2126@columbia.edu>. 
+The SimpleShadowShader.fx was originally written by Janessa, and modified by Ohan Oda.
+
+The DirectXShader.fx is wrote by Fan Lin <linfan68@gmail.com>
+
+The Glow.fx is from some sites that provide XNA shading samples (fogot which site they were)

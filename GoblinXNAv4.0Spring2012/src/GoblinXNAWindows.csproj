@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1666A393-C3B0-4C16-AEED-5FD54D890841}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoblinXNA</RootNamespace>
+    <AssemblyName>GoblinXNA</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\x86\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\bin\x86\GoblinXNA.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\x86\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\bin\x86\GoblinXNA.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DirectX.Capture, Version=1.0.3674.42904, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\managed\DirectX.Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="DShowNET, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\managed\DShowNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network, Version=2010.7.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\managed\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="MataliPhysics">
+      <HintPath>..\dlls\managed\MataliPhysics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="NewtonWrapper, Version=1.1.30.2009, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\managed\NewtonWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Nuclex.Fonts, Version=2.0.3554.30001, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\managed\Nuclex.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="NyARToolkitCS">
+      <HintPath>..\dlls\managed\NyARToolkitCS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Device\Capture\DirectShowCapture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Device\Capture\DirectShowCapture2.cs" />
+    <Compile Include="Device\Capture\HalfResizer.cs" />
+    <Compile Include="Device\Capture\PointGreyCapture1.7.cs" />
+    <Compile Include="Device\Capture\PointGrey\PGRFlyCapture.cs" />
+    <Compile Include="Device\Capture\PointGrey\PGRFlyDllBridge.cs" />
+    <Compile Include="Device\Capture\PointGrey\PGRFlyModule.cs" />
+    <Compile Include="Device\Capture\IResizer.cs" />
+    <Compile Include="Device\Capture\IVideoCapture.cs" />
+    <Compile Include="Device\Capture\NullCapture.cs" />
+    <Compile Include="Device\Capture\OpenCVCapture.cs" />
+    <Compile Include="Device\DeviceEnumerator.cs" />
+    <Compile Include="Device\Generic\GenericInput.cs" />
+    <Compile Include="Device\Generic\KeyboardInput.cs" />
+    <Compile Include="Device\Generic\MouseInput.cs" />
+    <Compile Include="Device\GPS\GPS.cs" />
+    <Compile Include="Device\InputDevice.cs" />
+    <Compile Include="Device\InputDevice_6DOF.cs" />
+    <Compile Include="Device\InputMapper.cs" />
+    <Compile Include="Device\InterSense\InterSense.cs" />
+    <Compile Include="Device\InterSense\InterSenseSocket.cs" />
+    <Compile Include="Device\InterSense\InterSenseStation.cs" />
+    <Compile Include="Device\InterSense\ISDllBridge.cs" />
+    <Compile Include="Device\IReconfigurable.cs" />
+    <Compile Include="Device\iWear\iWearDllBridge.cs" />
+    <Compile Include="Device\iWear\iWearTracker.cs" />
+    <Compile Include="Device\Vision\CvDllBridge.cs" />
+    <Compile Include="Device\Vision\CxcoreDllBridge.cs" />
+    <Compile Include="Device\Vision\HighguiDllBridge.cs" />
+    <Compile Include="Device\Util\DESPredictor.cs" />
+    <Compile Include="Device\Util\IPredictor.cs" />
+    <Compile Include="Device\Util\ISmoother.cs" />
+    <Compile Include="Device\Vision\ALVARDllBridge.cs" />
+    <Compile Include="Device\Vision\Marker\ALVARMarkerTracker.cs" />
+    <Compile Include="Device\Vision\Marker\IMarkerTracker.cs" />
+    <Compile Include="Device\Vision\Marker\MarkerDetector.cs" />
+    <Compile Include="Device\Vision\Marker\MarkerException.cs" />
+    <Compile Include="Device\Util\DESSmoother.cs" />
+    <Compile Include="Device\Vision\Marker\NyARToolkitTracker.cs" />
+    <Compile Include="Device\Vision\Marker\Threshold.cs" />
+    <Compile Include="GoblinEnums.cs" />
+    <Compile Include="GoblinException.cs" />
+    <Compile Include="Graphics\Text3D.cs" />
+    <Compile Include="Graphics\Billboard.cs" />
+    <Compile Include="Graphics\DebugShapeRenderer.cs" />
+    <Compile Include="Graphics\Environment.cs" />
+    <Compile Include="Graphics\Geometry\Capsule.cs" />
+    <Compile Include="Graphics\Geometry\ChamferCylinder.cs" />
+    <Compile Include="Graphics\Geometry\Cylinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\Geometry\Disk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\Geometry\PartialDisk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\Geometry\TexturedPlane.cs" />
+    <Compile Include="Graphics\Geometry\Sphere.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\Geometry\TexturedBox.cs" />
+    <Compile Include="Graphics\Geometry\TexturedSphere.cs" />
+    <Compile Include="Graphics\Geometry\Torus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\NormalMapMaterial.cs" />
+    <Compile Include="Helpers\AnimationHelper.cs" />
+    <Compile Include="Helpers\DefaultTransparencyComparer.cs" />
+    <Compile Include="Helpers\EffectHelper.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\Interpolator.cs" />
+    <Compile Include="Helpers\LatLonMapper.cs" />
+    <Compile Include="Helpers\StringHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\Vector4Helper.cs" />
+    <Compile Include="Helpers\XNATweener\Back.cs" />
+    <Compile Include="Helpers\XNATweener\BaseTweener.cs" />
+    <Compile Include="Helpers\XNATweener\Bounce.cs" />
+    <Compile Include="Helpers\XNATweener\Circular.cs" />
+    <Compile Include="Helpers\XNATweener\ColorTweener.cs" />
+    <Compile Include="Helpers\XNATweener\Cubic.cs" />
+    <Compile Include="Helpers\XNATweener\Elastic.cs" />
+    <Compile Include="Helpers\XNATweener\Exponential.cs" />
+    <Compile Include="Helpers\XNATweener\ITweener.cs" />
+    <Compile Include="Helpers\XNATweener\Linear.cs" />
+    <Compile Include="Helpers\XNATweener\Loop.cs" />
+    <Compile Include="Helpers\XNATweener\Quadratic.cs" />
+    <Compile Include="Helpers\XNATweener\Quartic.cs" />
+    <Compile Include="Helpers\XNATweener\Quintic.cs" />
+    <Compile Include="Helpers\XNATweener\Sinusoidal.cs" />
+    <Compile Include="Helpers\XNATweener\Tweener.cs" />
+    <Compile Include="Helpers\XNATweener\Vector2Tweener.cs" />
+    <Compile Include="Helpers\XNATweener\Vector3Tweener.cs" />
+    <Compile Include="Network\INetworkHandler.cs" />
+    <Compile Include="Network\NetworkHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\SocketNetworkHandler.cs" />
+    <Compile Include="Network\SocketServer.cs" />
+    <Compile Include="Physics\Havok\HavokDllBridge.cs" />
+    <Compile Include="Physics\Havok\HavokObject.cs" />
+    <Compile Include="Physics\Havok\HavokPhysics.cs" />
+    <Compile Include="Physics\IPhysicsMeshProvider.cs" />
+    <Compile Include="Physics\Matali\MataliCloth.cs" />
+    <Compile Include="Physics\Matali\MataliObject.cs" />
+    <Compile Include="Physics\Matali\MataliPhysics.cs" />
+    <Compile Include="Physics\Matali\MataliVehicle.cs" />
+    <Compile Include="Physics\Newton1\NewtonJoint.cs" />
+    <Compile Include="Physics\Newton1\NewtonMaterial.cs" />
+    <Compile Include="Physics\Newton1\NewtonPhysics.cs" />
+    <Compile Include="Physics\Newton1\NewtonTire.cs" />
+    <Compile Include="Physics\Newton1\NewtonVehicle.cs" />
+    <Compile Include="Physics\PhysicsObject.cs" />
+    <Compile Include="Physics\PickedObject.cs" />
+    <Compile Include="SceneGraph\BranchNode.cs" />
+    <Compile Include="Graphics\PrimitiveModel.cs" />
+    <Compile Include="SceneGraph\MarkerBundleNode.cs" />
+    <Compile Include="SceneGraph\SoundNode.cs" />
+    <Compile Include="SceneGraph\StereoCamera.cs" />
+    <Compile Include="SceneGraph\SynchronizedGeometryNode.cs" />
+    <Compile Include="SceneGraph\TrackerNode.cs" />
+    <Compile Include="Shaders\AlphaTestShader.cs" />
+    <Compile Include="Shaders\DirectXShader.cs" />
+    <Compile Include="Shaders\GlowShader.cs" />
+    <Compile Include="Shaders\IAlphaBlendable.cs" />
+    <Compile Include="Shaders\IShadowMap.cs" />
+    <Compile Include="Shaders\IShadowShader.cs" />
+    <Compile Include="Shaders\MultiLightShadowMap.cs" />
+    <Compile Include="Shaders\NormalMapShader.cs" />
+    <Compile Include="Shaders\SimpleShadowShader.cs" />
+    <Compile Include="Sounds\IAudioEmitter.cs" />
+    <Compile Include="Sounds\Sound.cs" />
+    <Compile Include="State.cs" />
+    <Compile Include="Graphics\Geometry\Box.cs" />
+    <Compile Include="Graphics\Geometry\VertexPositionNormal.cs" />
+    <Compile Include="Graphics\Material.cs" />
+    <Compile Include="Graphics\ParticleEffects\ExplosionParticleEffect.cs" />
+    <Compile Include="Graphics\ParticleEffects\ExplosionSmokeParticleEffect.cs" />
+    <Compile Include="Graphics\ParticleEffects\FireParticleEffect.cs" />
+    <Compile Include="Graphics\ParticleEffects\ParticleEffect.cs" />
+    <Compile Include="Graphics\ParticleEffects\ParticleEmitter.cs" />
+    <Compile Include="Graphics\ParticleEffects\ParticleVertex.cs" />
+    <Compile Include="Graphics\ParticleEffects\ProjectileTrailParticleEffect.cs" />
+    <Compile Include="Graphics\ParticleEffects\SmokePlumeParticleEffect.cs" />
+    <Compile Include="Graphics\CustomMesh.cs" />
+    <Compile Include="Helpers\ByteHelper.cs" />
+    <Compile Include="Helpers\ColorHelper.cs" />
+    <Compile Include="Helpers\Log.cs" />
+    <Compile Include="Helpers\MatrixHelper.cs" />
+    <Compile Include="PerformanceChecker.cs" />
+    <Compile Include="SceneGraph\Scene.cs" />
+    <Compile Include="Shaders\ParticleShader.cs" />
+    <Compile Include="UI\UI2D\AbstractButton.cs" />
+    <Compile Include="UI\UI2D\ButtonGroup.cs" />
+    <Compile Include="UI\UI2D\DefaultListCellRenderer.cs" />
+    <Compile Include="UI\UI2D\DefaultListModel.cs" />
+    <Compile Include="UI\UI2D\DefaultListSelectionModel.cs" />
+    <Compile Include="UI\UI2D\Fancy\G2DKeyboard.cs" />
+    <Compile Include="UI\UI2D\Fancy\G2DMediaControl.cs" />
+    <Compile Include="UI\UI2D\Fancy\G2DSuggestField.cs" />
+    <Compile Include="UI\UI2D\Fancy\G2DWaitBar.cs" />
+    <Compile Include="UI\UI2D\G2DButton.cs" />
+    <Compile Include="UI\UI2D\G2DCheckBox.cs" />
+    <Compile Include="UI\UI2D\G2DComboBox.cs" />
+    <Compile Include="UI\UI2D\G2DLabel.cs" />
+    <Compile Include="UI\UI2D\G2DList.cs" />
+    <Compile Include="UI\UI2D\G2DProgressBar.cs" />
+    <Compile Include="UI\UI2D\G2DRadioButton.cs" />
+    <Compile Include="UI\UI2D\G2DScrollBar.cs" />
+    <Compile Include="UI\UI2D\G2DScrollPane.cs" />
+    <Compile Include="UI\UI2D\G2DSeparator.cs" />
+    <Compile Include="UI\UI2D\G2DSlider.cs" />
+    <Compile Include="UI\UI2D\G2DSpinner.cs" />
+    <Compile Include="UI\UI2D\G2DTextArea.cs" />
+    <Compile Include="UI\UI2D\G2DTextField.cs" />
+    <Compile Include="UI\UI2D\ListCellRenderer.cs" />
+    <Compile Include="UI\UI2D\ListModel.cs" />
+    <Compile Include="UI\UI2D\ListSelectionModel.cs" />
+    <Compile Include="UI\UI2D\Scrollable.cs" />
+    <Compile Include="UI\UI2D\SpinnerModel.cs" />
+    <Compile Include="UI\UI2D\SpinnerIntegerModel.cs" />
+    <Compile Include="UI\UI2D\TextComponent.cs" />
+    <Compile Include="UI\UI2D\ToggleButton.cs" />
+    <Compile Include="UI\IGUIMapper.cs" />
+    <Compile Include="UI\Notifier.cs" />
+    <Compile Include="Helpers\RandomHelper.cs" />
+    <Compile Include="Helpers\RectangleHelper.cs" />
+    <Compile Include="Helpers\Vector3Helper.cs" />
+    <Compile Include="Network\IClient.cs" />
+    <Compile Include="Network\INetworkObject.cs" />
+    <Compile Include="Network\IServer.cs" />
+    <Compile Include="Network\LidgrenClient.cs" />
+    <Compile Include="Network\LidgrenServer.cs" />
+    <Compile Include="Physics\IPhysics.cs" />
+    <Compile Include="Physics\IPhysicsObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Graphics\IModel.cs" />
+    <Compile Include="Graphics\IModelLoader.cs" />
+    <Compile Include="SceneGraph\Camera.cs" />
+    <Compile Include="SceneGraph\CameraNode.cs" />
+    <Compile Include="SceneGraph\GeometryNode.cs" />
+    <Compile Include="SceneGraph\LightNode.cs" />
+    <Compile Include="Graphics\LightSource.cs" />
+    <Compile Include="SceneGraph\LODNode.cs" />
+    <Compile Include="SceneGraph\MarkerNode.cs" />
+    <Compile Include="SceneGraph\Node.cs" />
+    <Compile Include="SceneGraph\ParticleNode.cs" />
+    <Compile Include="SceneGraph\SwitchNode.cs" />
+    <Compile Include="SceneGraph\TransformNode.cs" />
+    <Compile Include="Shaders\IShader.cs" />
+    <Compile Include="Graphics\Model.cs" />
+    <Compile Include="Graphics\ModelLoader.cs" />
+    <Compile Include="Shaders\Shader.cs" />
+    <Compile Include="Shaders\SimpleEffectShader.cs" />
+    <Compile Include="UI\Component.cs" />
+    <Compile Include="UI\UI2DTo3D\GUI2Dto3DHelper.cs" />
+    <Compile Include="UI\UI2DTo3D\GUI2Dto3DMapper.cs" />
+    <Compile Include="UI\UI2D\G2DComponent.cs" />
+    <Compile Include="UI\UI2D\G2DPanel.cs" />
+    <Compile Include="UI\UI2D\UI2DHelper.cs" />
+    <Compile Include="UI\UI2D\UI2DRenderer.cs" />
+    <Compile Include="UI\UI3D\G3DComponent.cs" />
+    <Compile Include="UI\UI3D\G3DPanel.cs" />
+    <Compile Include="UI\UI3D\UI3DHelper.cs" />
+    <Compile Include="UI\UI3D\UI3DRenderer.cs" />
+    <Compile Include="UI\UIRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

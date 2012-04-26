@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoblinXNAWindowsPhone", "GoblinXNAWindowsPhone.csproj", "{35524ADF-02D4-4B91-8515-8556275B80BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35524ADF-02D4-4B91-8515-8556275B80BF}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{35524ADF-02D4-4B91-8515-8556275B80BF}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{35524ADF-02D4-4B91-8515-8556275B80BF}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{35524ADF-02D4-4B91-8515-8556275B80BF}.Release|Windows Phone.Build.0 = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

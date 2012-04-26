@@ -1,0 +1,11 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Tutorial1 - Getting Started - Phone" EntryPointType="Tutorial1___Getting_Started.Tutorial1" RuntimeVersion="3.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Tutorial1 - Getting Started - Phone" Source="Tutorial1 - Getting Started - Phone.dll" />
+    <AssemblyPart x:Name="GoblinXNA" Source="GoblinXNA.dll" />
+    <AssemblyPart x:Name="NyARToolkit4" Source="NyARToolkit4.dll" />
+    <AssemblyPart x:Name="NyARToolkitCS" Source="NyARToolkitCS.dll" />
+    <AssemblyPart x:Name="MataliPhysics" Source="MataliPhysics.dll" />
+    <AssemblyPart x:Name="NyARToolkit4.markersystem" Source="NyARToolkit4.markersystem.dll" />
+    <AssemblyPart x:Name="Nuclex.Fonts" Source="Nuclex.Fonts.dll" />
+  </Deployment.Parts>
+</Deployment>

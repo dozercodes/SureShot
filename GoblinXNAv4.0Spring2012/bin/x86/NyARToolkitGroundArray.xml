@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<multimarker markers="28">
+  <marker patternName="marker0.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-162,-89.10001" />
+  <marker patternName="marker1.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-113.4,-89.10001" />
+  <marker patternName="marker2.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-64.8,-89.10001" />
+  <marker patternName="marker3.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-16.2,-89.10001" />
+  <marker patternName="marker4.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="32.4,-89.10001" />
+  <marker patternName="marker5.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="81,-89.10001" />
+  <marker patternName="marker6.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="129.6,-89.10001" />
+  <marker patternName="marker7.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-162,-40.5" />
+  <marker patternName="marker8.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-113.4,-40.5" />
+  <marker patternName="marker9.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-64.8,-40.5" />
+  <marker patternName="marker10.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-16.2,-40.5" />
+  <marker patternName="marker11.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="32.4,-40.5" />
+  <marker patternName="marker12.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="81,-40.5" />
+  <marker patternName="marker13.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="129.6,-40.5" />
+  <marker patternName="marker14.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-162,8.1" />
+  <marker patternName="marker15.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-113.4,8.1" />
+  <marker patternName="marker16.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-64.8,8.1" />
+  <marker patternName="marker17.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-16.2,8.1" />
+  <marker patternName="marker18.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="32.4,8.1" />
+  <marker patternName="marker19.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="81,8.1" />
+  <marker patternName="marker20.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="129.6,8.1" />
+  <marker patternName="marker21.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-162,56.7" />
+  <marker patternName="marker22.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-113.4,56.7" />
+  <marker patternName="marker23.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-64.8,56.7" />
+  <marker patternName="marker24.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-16.2,56.7" />
+  <marker patternName="marker25.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="32.4,56.7" />
+  <marker patternName="marker26.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="81,56.7" />
+  <marker patternName="marker27.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="129.6,56.7" />
+</multimarker>

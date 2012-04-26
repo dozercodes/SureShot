@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraCalibration", "CameraCalibration.csproj", "{82209EB1-E3B2-42CB-AD9C-2FDEF7491CAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraCalibrationContent", "Content\CameraCalibrationContent.contentproj", "{3204D527-863B-446F-8C07-7EAF88A68E23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82209EB1-E3B2-42CB-AD9C-2FDEF7491CAB}.Debug|x86.ActiveCfg = Debug|x86
+		{82209EB1-E3B2-42CB-AD9C-2FDEF7491CAB}.Debug|x86.Build.0 = Debug|x86
+		{82209EB1-E3B2-42CB-AD9C-2FDEF7491CAB}.Release|x86.ActiveCfg = Release|x86
+		{82209EB1-E3B2-42CB-AD9C-2FDEF7491CAB}.Release|x86.Build.0 = Release|x86
+		{3204D527-863B-446F-8C07-7EAF88A68E23}.Debug|x86.ActiveCfg = Debug|x86
+		{3204D527-863B-446F-8C07-7EAF88A68E23}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

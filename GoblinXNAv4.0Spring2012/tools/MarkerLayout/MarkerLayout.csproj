@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A3D1FE5-7330-4E41-9E7F-B68ECE04EED0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MarkerLayout</RootNamespace>
+    <AssemblyName>MarkerLayout</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TeamSystem.Data.UnitTesting, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImageReader.cs" />
+    <Compile Include="LayoutManager.cs" />
+    <Compile Include="SampleProgram.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_10.png">
+      <Link>raw_markers\ALVAR\MarkerData_10.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_11.png">
+      <Link>raw_markers\ALVAR\MarkerData_11.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_12.png">
+      <Link>raw_markers\ALVAR\MarkerData_12.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_13.png">
+      <Link>raw_markers\ALVAR\MarkerData_13.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_14.png">
+      <Link>raw_markers\ALVAR\MarkerData_14.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_15.png">
+      <Link>raw_markers\ALVAR\MarkerData_15.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_16.png">
+      <Link>raw_markers\ALVAR\MarkerData_16.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_17.png">
+      <Link>raw_markers\ALVAR\MarkerData_17.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_18.png">
+      <Link>raw_markers\ALVAR\MarkerData_18.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_19.png">
+      <Link>raw_markers\ALVAR\MarkerData_19.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_20.png">
+      <Link>raw_markers\ALVAR\MarkerData_20.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_21.png">
+      <Link>raw_markers\ALVAR\MarkerData_21.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_22.png">
+      <Link>raw_markers\ALVAR\MarkerData_22.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_23.png">
+      <Link>raw_markers\ALVAR\MarkerData_23.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_24.png">
+      <Link>raw_markers\ALVAR\MarkerData_24.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_25.png">
+      <Link>raw_markers\ALVAR\MarkerData_25.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_26.png">
+      <Link>raw_markers\ALVAR\MarkerData_26.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_27.png">
+      <Link>raw_markers\ALVAR\MarkerData_27.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_28.png">
+      <Link>raw_markers\ALVAR\MarkerData_28.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_29.png">
+      <Link>raw_markers\ALVAR\MarkerData_29.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_30.png">
+      <Link>raw_markers\ALVAR\MarkerData_30.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_31.png">
+      <Link>raw_markers\ALVAR\MarkerData_31.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_32.png">
+      <Link>raw_markers\ALVAR\MarkerData_32.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_33.png">
+      <Link>raw_markers\ALVAR\MarkerData_33.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_34.png">
+      <Link>raw_markers\ALVAR\MarkerData_34.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_35.png">
+      <Link>raw_markers\ALVAR\MarkerData_35.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_36.png">
+      <Link>raw_markers\ALVAR\MarkerData_36.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_37.png">
+      <Link>raw_markers\ALVAR\MarkerData_37.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_38.png">
+      <Link>raw_markers\ALVAR\MarkerData_38.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_39.png">
+      <Link>raw_markers\ALVAR\MarkerData_39.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_4.png">
+      <Link>raw_markers\ALVAR\MarkerData_4.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_40.png">
+      <Link>raw_markers\ALVAR\MarkerData_40.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_41.png">
+      <Link>raw_markers\ALVAR\MarkerData_41.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_42.png">
+      <Link>raw_markers\ALVAR\MarkerData_42.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_43.png">
+      <Link>raw_markers\ALVAR\MarkerData_43.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_44.png">
+      <Link>raw_markers\ALVAR\MarkerData_44.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_45.png">
+      <Link>raw_markers\ALVAR\MarkerData_45.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_46.png">
+      <Link>raw_markers\ALVAR\MarkerData_46.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_47.png">
+      <Link>raw_markers\ALVAR\MarkerData_47.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_48.png">
+      <Link>raw_markers\ALVAR\MarkerData_48.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_49.png">
+      <Link>raw_markers\ALVAR\MarkerData_49.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_5.png">
+      <Link>raw_markers\ALVAR\MarkerData_5.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_50.png">
+      <Link>raw_markers\ALVAR\MarkerData_50.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_51.png">
+      <Link>raw_markers\ALVAR\MarkerData_51.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_52.png">
+      <Link>raw_markers\ALVAR\MarkerData_52.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_53.png">
+      <Link>raw_markers\ALVAR\MarkerData_53.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_54.png">
+      <Link>raw_markers\ALVAR\MarkerData_54.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_55.png">
+      <Link>raw_markers\ALVAR\MarkerData_55.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_56.png">
+      <Link>raw_markers\ALVAR\MarkerData_56.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_57.png">
+      <Link>raw_markers\ALVAR\MarkerData_57.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_58.png">
+      <Link>raw_markers\ALVAR\MarkerData_58.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_59.png">
+      <Link>raw_markers\ALVAR\MarkerData_59.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_6.png">
+      <Link>raw_markers\ALVAR\MarkerData_6.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_60.png">
+      <Link>raw_markers\ALVAR\MarkerData_60.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_7.png">
+      <Link>raw_markers\ALVAR\MarkerData_7.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_8.png">
+      <Link>raw_markers\ALVAR\MarkerData_8.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\GoblinXNAv3.0\tools\MarkerLayout\raw_markers\ALVAR\MarkerData_9.png">
+      <Link>raw_markers\ALVAR\MarkerData_9.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="raw_markers\ALVAR\MarkerData_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="raw_markers\ALVAR\MarkerData_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="raw_markers\ALVAR\MarkerData_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="raw_markers\ALVAR\MarkerData_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleALVARLayout.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleNyARToolkitLayout.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+</Project>

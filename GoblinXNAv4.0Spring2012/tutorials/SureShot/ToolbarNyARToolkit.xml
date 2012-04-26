@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<multimarker markers="2">
+  <marker patternName="marker29.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="-40.5,-16.2" />
+  <marker patternName="marker30.patt" patternWidth="16" patternHeight="16" patternSize="32.4" confidence="0.7" upperLeftCorner="8.1,-16.2" />
+</multimarker>

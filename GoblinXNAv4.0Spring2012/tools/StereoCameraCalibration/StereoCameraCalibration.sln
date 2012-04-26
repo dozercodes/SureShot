@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StereoCameraCalibration", "StereoCameraCalibration\StereoCameraCalibration.csproj", "{3F295C28-CBFD-4F8E-8B4C-2EDDD98FC398}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "StereoCameraCalibrationContent", "StereoCameraCalibrationContent\StereoCameraCalibrationContent.contentproj", "{C14B3096-6D1D-424F-B433-C3B765556398}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F295C28-CBFD-4F8E-8B4C-2EDDD98FC398}.Debug|x86.ActiveCfg = Debug|x86
+		{3F295C28-CBFD-4F8E-8B4C-2EDDD98FC398}.Debug|x86.Build.0 = Debug|x86
+		{3F295C28-CBFD-4F8E-8B4C-2EDDD98FC398}.Release|x86.ActiveCfg = Release|x86
+		{3F295C28-CBFD-4F8E-8B4C-2EDDD98FC398}.Release|x86.Build.0 = Release|x86
+		{C14B3096-6D1D-424F-B433-C3B765556398}.Debug|x86.ActiveCfg = Debug|x86
+		{C14B3096-6D1D-424F-B433-C3B765556398}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

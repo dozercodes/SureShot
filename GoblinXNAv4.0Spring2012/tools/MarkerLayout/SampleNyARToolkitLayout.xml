@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MarkerLayout width="400" height="400" markerSize="20" center="60, 60">
+  <Marker id="0" image="raw_markers/ALVAR/MarkerData_0.png" upperLeftCorner="60,60" 
+          additionalInfo="patternName=marker0.patt;patternWidth=16;patternHeight=16;confidence=0.7"/>
+  <Marker id="1" image="raw_markers/ALVAR/MarkerData_1.png" upperLeftCorner="60,232"
+          additionalInfo="patternName=marker1.patt;patternWidth=16;patternHeight=16;confidence=0.7" />
+  <Marker id="2" image="raw_markers/ALVAR/MarkerData_2.png" upperLeftCorner="232,60"
+          additionalInfo="patternName=marker2.patt;patternWidth=16;patternHeight=16;confidence=0.7" />
+  <Marker id="3" image="raw_markers/ALVAR/MarkerData_3.png" upperLeftCorner="232,232"
+          additionalInfo="patternName=marker3.patt;patternWidth=16;patternHeight=16;confidence=0.7" />
+  <OutputImage name="NyARToolkitArrayFromXML.gif" />
+  <OutputConfig name="NyARToolkitConfigFromXML.xml" type="NyARToolkit"/>
+</MarkerLayout>

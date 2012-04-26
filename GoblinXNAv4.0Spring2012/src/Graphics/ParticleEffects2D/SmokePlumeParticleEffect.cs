@@ -1,0 +1,147 @@
+#region File Description
+//-----------------------------------------------------------------------------
+// SmokePlumeParticleSystem.cs
+//
+// Microsoft XNA Community Game Platform
+// Copyright (C) Microsoft Corporation. All rights reserved.
+//-----------------------------------------------------------------------------
+#endregion
+
+#region Using Statements
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
+using GoblinXNA.Helpers;
+#endregion
+
+namespace GoblinXNA.Graphics.ParticleEffects2D
+{
+    /// <summary>
+    /// SmokePlumeParticleSystem is a specialization of ParticleSystem which sends up a
+    /// plume of smoke. The smoke is blown to the right by the wind.
+    /// </summary>
+    public class SmokePlumeParticleEffect : ParticleEffect
+    {
+        public SmokePlumeParticleEffect(int howManyEffects, SpriteBatch spriteBatch)
+            : this(howManyEffects, spriteBatch, false)
+        {
+        }
+
+        public SmokePlumeParticleEffect(int howManyEffects, SpriteBatch spriteBatch, bool computeIn3D)
+            : base(howManyEffects, spriteBatch, computeIn3D)
+        {
+        }
+
+        /// <summary>
+        /// Set up the constants that will give this particle system its behavior and
+        /// properties.
+        /// </summary>
+        protected override void InitializeConstants()
+        {
+            textureFilename = "smoke";
+
+            minInitialSpeed = 20;
+            maxInitialSpeed = 100;
+
+            if (ComputeIn3D)
+            {
+                minInitialSpeed /= 10;
+                maxInitialSpeed /= 10;
+            }
+
+            // we don't want the particles to accelerate at all, aside from what we
+            // do in our overriden InitializeParticle.
+            minAcceleration = 0;
+            maxAcceleration = 0;
+
+            // long lifetime, this can be changed to create thinner or thicker smoke.
+            // tweak minNumParticles and maxNumParticles to complement the effect.
+            minLifetime = 3.0f;
+            maxLifetime = 5.0f;
+
+            minScale = .2f;
+            maxScale = .5f;
+
+            // we need to reduce the number of particles on Windows Phone in order to keep
+            // a good framerate
+#if WINDOWS_PHONE
+            minNumParticles = 3;
+            maxNumParticles = 8;
+#else
+            minNumParticles = 7;
+            maxNumParticles = 15;
+#endif
+
+            // rotate slowly, we want a fairly relaxed effect
+            minRotationSpeed = -MathHelper.PiOver4 / 2.0f;
+            maxRotationSpeed = MathHelper.PiOver4 / 2.0f;
+
+			blendState = BlendState.AlphaBlend;
+
+            drawOrder = AlphaBlendDrawOrder;
+        }
+
+        /// <summary>
+        /// PickRandomDirection is overriden so that we can make the particles always 
+        /// move have an initial velocity pointing up.
+        /// </summary>
+        /// <returns>a random direction which points basically up.</returns>
+        protected override Vector2 PickRandomDirection()
+        {
+            // Point the particles somewhere between 80 and 100 degrees.
+            // tweak this to make the smoke have more or less spread.
+            float radians = RandomHelper.GetRandomFloat(
+                MathHelper.ToRadians(80), MathHelper.ToRadians(100));
+
+            Vector2 direction = Vector2.Zero;
+            // from the unit circle, cosine is the x coordinate and sine is the
+            // y coordinate. We're negating y because on the screen increasing y moves
+            // down the monitor.
+            direction.X = (float)Math.Cos(radians);
+            direction.Y = -(float)Math.Sin(radians);
+            return direction;
+        }
+
+        protected override Vector3 PickRandomDirection3D()
+        {
+            // Point the particles somewhere between 80 and 100 degrees.
+            // tweak this to make the smoke have more or less spread.
+            float radians = RandomHelper.GetRandomFloat(
+                MathHelper.ToRadians(80), MathHelper.ToRadians(100));
+            float theta = RandomHelper.GetRandomFloat(-MathHelper.PiOver2, MathHelper.PiOver2);
+
+            Vector3 direction = Vector3.Zero;
+            // from the unit circle, cosine is the x coordinate and sine is the
+            // y coordinate. We're negating y because on the screen increasing y moves
+            // down the monitor.
+            direction.X = (float)Math.Cos(radians);
+            direction.Y = -(float)Math.Sin(radians);
+            direction.Z = (float)Math.Sin(theta);
+            return direction;
+        }
+
+        /// <summary>
+        /// InitializeParticle is overridden to add the appearance of wind.
+        /// </summary>
+        /// <param name="p">the particle to set up</param>
+        /// <param name="where">where the particle should be placed</param>
+        protected override void InitializeParticle(Particle p, Vector2 where)
+        {
+            base.InitializeParticle(p, where);
+
+            // the base is mostly good, but we want to simulate a little bit of wind
+            // heading to the right.
+            p.Acceleration.X += RandomHelper.GetRandomFloat(10, 50);
+        }
+
+        protected override void InitializeParticle3D(Particle p, Vector3 where)
+        {
+            base.InitializeParticle3D(p, where);
+
+            p.Acceleration3D.X += RandomHelper.GetRandomFloat(1, 5);
+        }
+    }
+}
