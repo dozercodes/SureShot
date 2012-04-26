@@ -1,16 +1,17 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tutorial8 - Optical Marker Tracking")]
-[assembly: AssemblyProduct("Tutorial8 - Optical Marker Tracking")]
+[assembly: AssemblyTitle("Tutorial16___Multiple_Viewport___Phone")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("Columbia University")]
-
-[assembly: AssemblyCopyright("Copyright © Columbia University 2012")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Tutorial16___Multiple_Viewport___Phone")]
+[assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,8 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("49930f09-2893-4730-8909-4ff9189e19a4")]
-
+[assembly: Guid("de7d6c83-c846-4d3a-9657-4e7ada397765")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -30,4 +30,8 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 [assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguageAttribute("en-US")]

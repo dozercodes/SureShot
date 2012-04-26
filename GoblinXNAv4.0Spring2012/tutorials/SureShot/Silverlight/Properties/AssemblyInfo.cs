@@ -6,12 +6,12 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tutorial8___Optical_Marker_Tracking___Phone")]
+[assembly: AssemblyTitle("Tutorial16___Multiple_Viewport___Phone")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Tutorial8___Optical_Marker_Tracking___Phone")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2012")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Tutorial16___Multiple_Viewport___Phone")]
+[assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +21,7 @@ using System.Resources;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b83bca54-2175-47c6-a7d0-cdc36ebe609e")]
+[assembly: Guid("de7d6c83-c846-4d3a-9657-4e7ada397765")]
 
 // Version information for an assembly consists of the following four values:
 //

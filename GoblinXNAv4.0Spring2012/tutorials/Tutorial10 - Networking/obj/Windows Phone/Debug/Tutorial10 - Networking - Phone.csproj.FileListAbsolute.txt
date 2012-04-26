@@ -1,0 +1,13 @@
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\DebugFont.xnb
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial10 - Networking - Phone.dll
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial10 - Networking - Phone.pdb
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial10 - Networking\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial10 - Networking\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial10 - Networking\obj\Windows Phone\Debug\Tutorial10 - Networking - Phone.dll
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial10 - Networking\obj\Windows Phone\Debug\Tutorial10 - Networking - Phone.pdb
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial10 - Networking\..\..\bin\Windows Phone\AppManifest.xaml
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial10 - Networking\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial10 - Networking\obj\Windows Phone\Debug\WMAppManifest.xml
+..\..\bin\Windows Phone\
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial10 - Networking\..\..\bin\Windows Phone\Tutorial10 - Networking - Phone.xap
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial10 - Networking\obj\Windows Phone\Debug\XapCacheFile.xml

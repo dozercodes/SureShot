@@ -16,10 +16,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Tutorial8___Optical_Marker_Tracking___Phone
+namespace Tutorial16___Multiple_Viewport___Phone
 {
-    // The App implements IServiceProvider for ContentManagers and other types to
-    // be able to access the graphics device services.
     public partial class App : Application, IServiceProvider
     {
         /// <summary>

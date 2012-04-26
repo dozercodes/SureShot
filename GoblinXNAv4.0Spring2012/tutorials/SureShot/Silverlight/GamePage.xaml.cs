@@ -45,16 +45,16 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-using Tutorial8___Optical_Marker_Tracking___PhoneLib;
+using Tutorial16___Multiple_Viewport___PhoneLib;
 
-namespace Tutorial8___Optical_Marker_Tracking___Phone
+namespace Tutorial16___Multiple_Viewport___Phone
 {
     public partial class GamePage : PhoneApplicationPage
     {
         ContentManager contentManager;
         GameTimer timer;
 
-        Tutorial8_Phone tutorial8;
+        SureShot tutorial16;
 
         // For rendering the XAML onto a texture
         UIElementRenderer elementRenderer;
@@ -72,7 +72,7 @@ namespace Tutorial8___Optical_Marker_Tracking___Phone
             timer.Update += OnUpdate;
             timer.Draw += OnDraw;
 
-            tutorial8 = new Tutorial8_Phone();
+            tutorial16 = new SureShot();
 
             LayoutUpdated += new EventHandler(GamePage_LayoutUpdated);
         }
@@ -94,7 +94,7 @@ namespace Tutorial8___Optical_Marker_Tracking___Phone
             // Set the sharing mode of the graphics device to turn on XNA rendering
             SharedGraphicsDeviceManager.Current.GraphicsDevice.SetSharingMode(true);
 
-            tutorial8.Initialize(SharedGraphicsDeviceManager.Current, contentManager, viewfinderBrush);
+            tutorial16.Initialize(SharedGraphicsDeviceManager.Current, contentManager, viewfinderBrush);
 
             // Start the timer
             timer.Start();
@@ -110,7 +110,7 @@ namespace Tutorial8___Optical_Marker_Tracking___Phone
             // Set the sharing mode of the graphics device to turn off XNA rendering
             SharedGraphicsDeviceManager.Current.GraphicsDevice.SetSharingMode(false);
 
-            tutorial8.Dispose();
+            tutorial16.Dispose();
 
             base.OnNavigatedFrom(e);
         }
@@ -121,7 +121,7 @@ namespace Tutorial8___Optical_Marker_Tracking___Phone
         /// </summary>
         private void OnUpdate(object sender, GameTimerEventArgs e)
         {
-            tutorial8.Update(e.ElapsedTime, this.IsEnabled);
+            tutorial16.Update(e.ElapsedTime, this.IsEnabled);
         }
 
         /// <summary>
@@ -132,10 +132,10 @@ namespace Tutorial8___Optical_Marker_Tracking___Phone
             // Render the Silverlight controls using the UIElementRenderer
             elementRenderer.Render();
 
-            if (tutorial8.VideoBackground == null)
-                tutorial8.VideoBackground = elementRenderer.Texture;
+            if (tutorial16.VideoBackground == null)
+                tutorial16.VideoBackground = elementRenderer.Texture;
 
-            tutorial8.Draw(e.ElapsedTime);
+            tutorial16.Draw(e.ElapsedTime);
         }
     }
 }

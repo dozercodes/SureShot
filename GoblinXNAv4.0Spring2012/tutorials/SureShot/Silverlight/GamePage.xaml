@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="Tutorial8___Optical_Marker_Tracking___Phone.GamePage"
+    x:Class="Tutorial16___Multiple_Viewport___Phone.GamePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -25,5 +25,5 @@
             </Rectangle.Fill>
         </Rectangle>
     </Grid>
-
+    
 </phone:PhoneApplicationPage>
