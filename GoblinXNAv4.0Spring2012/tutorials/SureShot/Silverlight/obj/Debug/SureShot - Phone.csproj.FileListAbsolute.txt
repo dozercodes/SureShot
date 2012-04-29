@@ -49,4 +49,6 @@ C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutor
 C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Tutorial16___Multiple_Viewport___Phone.xap
 C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\Silverlight\obj\Debug\XapCacheFile.xml
 C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Content\crosshair3.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Content\Ball.xnb
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Content\BallBlue.xnb
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Content\BallRed.xnb
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Content\BallWhite.xnb

@@ -75,7 +75,9 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
         Viewport viewport;
 
         GeometryNode markerBoardGeom;
-        GeometryNode overlayNode;
+        GeometryNode target1;
+        GeometryNode target2;
+        GeometryNode target3;
         GeometryNode vrCameraRepNode;
         TransformNode vrCameraRepTransNode;
 
@@ -289,25 +291,58 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
         {
             ModelLoader loader = new ModelLoader();
 
-            overlayNode = new GeometryNode("Overlay");
-            overlayNode.Model = (Model)loader.Load("", "Ball");
-            ((Model)overlayNode.Model).UseInternalMaterials = true;
+            target1 = new GeometryNode("Ball1");
+            target1.Model = (Model)loader.Load("", "BallWhite");
+            ((Model)target1.Model).UseInternalMaterials = true;
+
+            target2 = new GeometryNode("Ball2");
+            target2.Model = (Model)loader.Load("", "BallRed");
+            ((Model)target2.Model).UseInternalMaterials = true;
+
+            target3 = new GeometryNode("Ball3");
+            target3.Model = (Model)loader.Load("", "BallBlue");
+            ((Model)target3.Model).UseInternalMaterials = true;
 
             // Get the dimension of the model
-            Vector3 dimension = Vector3Helper.GetDimensions(overlayNode.Model.MinimumBoundingBox);
+            Vector3 dimension = Vector3Helper.GetDimensions(target1.Model.MinimumBoundingBox);
             // Scale the model to fit to the size of 5 markers
-            float scale = markerSize * 5 / Math.Max(dimension.X, dimension.Z);
-
-            TransformNode overlayTransNode = new TransformNode()
+            float scale = markerSize / Math.Max(dimension.X, dimension.Z);
+            
+            Random rand = new Random();
+            float range = 4 * markerSize;
+            //USE Bounding Box
+            TransformNode tar1TransNode = new TransformNode()
             {
-                Translation = new Vector3(0, 0, dimension.Y * scale / 2),
+                Translation = new Vector3((float)rand.NextDouble(), (float)rand.NextDouble() * range, dimension.Y * scale / 2),
                 Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
                     Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
-                Scale = new Vector3(scale/10, scale/10, scale/10)
+                Scale = new Vector3(scale, scale, scale)
             };
 
-            scene.RootNode.AddChild(overlayTransNode);
-            overlayTransNode.AddChild(overlayNode);
+            scene.RootNode.AddChild(tar1TransNode);
+            tar1TransNode.AddChild(target1);
+
+            TransformNode tar2TransNode = new TransformNode()
+            {
+                Translation = new Vector3((float)rand.NextDouble() * range, (float)rand.NextDouble() * range, dimension.Y * scale / 2),
+                Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
+                    Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
+                Scale = new Vector3(scale, scale, scale)
+            };
+
+            scene.RootNode.AddChild(tar2TransNode);
+            tar2TransNode.AddChild(target2);
+
+            TransformNode tar3TransNode = new TransformNode()
+            {
+                Translation = new Vector3((float)rand.NextDouble() * range, (float)rand.NextDouble() * range, dimension.Y * scale / 2),
+                Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
+                    Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
+                Scale = new Vector3(scale, scale, scale)
+            };
+
+            scene.RootNode.AddChild(tar3TransNode);
+            tar3TransNode.AddChild(target3);
         }
 
         public void Dispose()
@@ -325,8 +360,6 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             // Reset the XNA viewport to our centered and resized viewport
             State.Device.Viewport = viewport;
 
-            
-
             // Set the render target for rendering the AR scene
             scene.SceneRenderTarget = arViewRenderTarget;
             scene.BackgroundColor = Color.Black;
@@ -335,8 +368,12 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             // Set the camera to be the AR camera
             scene.CameraNode = arCameraNode;
             // Associate the overlaid model with the ground marker for rendering it in AR scene
-            scene.RootNode.RemoveChild(overlayNode.Parent);
-            groundMarkerNode.AddChild(overlayNode.Parent);
+            scene.RootNode.RemoveChild(target1.Parent);
+            groundMarkerNode.AddChild(target1.Parent);
+            scene.RootNode.RemoveChild(target2.Parent);
+            groundMarkerNode.AddChild(target2.Parent);
+            scene.RootNode.RemoveChild(target3.Parent);
+            groundMarkerNode.AddChild(target3.Parent);
             // Don't render the marker board and camera representation
             markerBoardGeom.Enabled = false;
             vrCameraRepNode.Enabled = false;
@@ -356,8 +393,12 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             // Set the camera to be the VR camera
             scene.CameraNode = vrCameraNode;
             // Remove the overlaid model from the ground marker for rendering it in VR scene
-            groundMarkerNode.RemoveChild(overlayNode.Parent);
-            scene.RootNode.AddChild(overlayNode.Parent);
+            groundMarkerNode.RemoveChild(target1.Parent);
+            scene.RootNode.AddChild(target1.Parent);
+            groundMarkerNode.RemoveChild(target2.Parent);
+            scene.RootNode.AddChild(target2.Parent);
+            groundMarkerNode.RemoveChild(target3.Parent);
+            scene.RootNode.AddChild(target3.Parent);
             // Render the marker board and camera representation in VR scene
             markerBoardGeom.Enabled = true;
             vrCameraRepNode.Enabled = true;

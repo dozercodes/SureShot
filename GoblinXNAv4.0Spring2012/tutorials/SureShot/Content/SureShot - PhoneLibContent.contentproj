@@ -72,8 +72,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ball.fbx">
-      <Name>Ball</Name>
+    <Compile Include="BallBlue.fbx">
+      <Name>BallBlue</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="BallRed.fbx">
+      <Name>BallRed</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="BallWhite.fbx">
+      <Name>BallWhite</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>

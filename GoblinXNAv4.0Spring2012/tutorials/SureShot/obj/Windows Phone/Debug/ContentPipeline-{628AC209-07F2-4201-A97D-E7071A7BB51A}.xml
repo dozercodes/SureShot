@@ -66,23 +66,63 @@
       <Time>2011-11-22T12:30:02-05:00</Time>
     </Item>
     <Item>
-      <Source>Ball.fbx</Source>
-      <Name>Ball</Name>
+      <Source>BallBlue.fbx</Source>
+      <Name>BallBlue</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\Ball.xnb</Output>
-      <Time>2006-08-11T12:04:34-04:00</Time>
+      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\BallBlue.xnb</Output>
+      <Time>2012-04-26T15:37:55.5096567-04:00</Time>
       <Dependency>
-        <Key>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\Ball_0.xml</Key>
-        <Value>2012-04-26T12:58:32.2306684-04:00</Value>
+        <Key>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\BallBlue_0.xml</Key>
+        <Value>2012-04-26T15:38:50.2957903-04:00</Value>
       </Dependency>
     </Item>
     <Item>
-      <Source>Ball.fbx</Source>
+      <Source>BallRed.fbx</Source>
+      <Name>BallRed</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\BallRed.xnb</Output>
+      <Time>2012-04-26T15:38:09.3324473-04:00</Time>
+      <Dependency>
+        <Key>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\BallRed_0.xml</Key>
+        <Value>2012-04-26T15:38:51.0988362-04:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>BallWhite.fbx</Source>
+      <Name>BallWhite</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\BallWhite.xnb</Output>
+      <Time>2006-08-11T12:04:34-04:00</Time>
+      <Dependency>
+        <Key>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\BallWhite_0.xml</Key>
+        <Value>2012-04-26T15:33:30.658508-04:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>BallBlue.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\Ball_0.xml</Output>
+      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\BallBlue_0.xml</Output>
+      <Time>2012-04-26T15:37:55.5096567-04:00</Time>
+    </Item>
+    <Item>
+      <Source>BallRed.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\BallRed_0.xml</Output>
+      <Time>2012-04-26T15:38:09.3324473-04:00</Time>
+    </Item>
+    <Item>
+      <Source>BallWhite.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\BallWhite_0.xml</Output>
       <Time>2006-08-11T12:04:34-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>

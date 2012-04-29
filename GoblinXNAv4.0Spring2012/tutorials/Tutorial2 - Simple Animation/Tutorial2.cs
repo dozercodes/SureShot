@@ -195,7 +195,7 @@ namespace Tutorial2___Simple_Animation
             // Create a transform node to define the transformation for the ship
             TransformNode shipTransNode = new TransformNode();
             shipTransNode.Translation = new Vector3(0, 5, -12); 
-            shipTransNode.Scale = new Vector3(0.0002f, 0.0002f, 0.0002f); // It's huge!
+            shipTransNode.Scale = new Vector3(0.002f, 0.002f, 0.002f); // It's huge!
             shipTransNode.Rotation = Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 0),
                 MathHelper.ToRadians(90));
 
