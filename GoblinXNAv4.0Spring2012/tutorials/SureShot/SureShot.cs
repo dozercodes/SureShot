@@ -179,8 +179,8 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
                 Vector3 farPoint = graphics.GraphicsDevice.Viewport.Unproject(farSource,
                     State.ProjectionMatrix, State.ViewMatrix, Matrix.Identity);
 
-                //List<PickedObject> pickedObjects = ((MataliPhysics)scene.PhysicsEngine).PickRayCast(
-                //    nearPoint, farPoint);
+                List<PickedObject> pickedObjects = ((MataliPhysics)scene.PhysicsEngine).PickRayCast(
+                    nearPoint, farPoint);
                 //if (pickedObjects.Count > 0)
                 //{
                 //    // get closes object
