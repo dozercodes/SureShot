@@ -84,7 +84,6 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
 
         GeometryNode groundNode;
         GeometryNode markerBoardGeom;
-        GeometryNode crosshairs;
         GeometryNode pickedNode;
         GeometryNode vrCameraRepNode;
         TransformNode vrCameraRepTransNode;
@@ -132,6 +131,11 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             // Initialize the scene graph
             scene = new Scene();
 
+            // We will use the Matali physics engine ()
+            // for processing the intersection of cast rays with
+            // 3D objects to detect object selection. 
+            scene.PhysicsEngine = new MataliPhysics();
+
             // Set up the lights used in the scene
             CreateLights();
 
@@ -175,7 +179,7 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
                 Vector3 farPoint = graphics.GraphicsDevice.Viewport.Unproject(farSource,
                     State.ProjectionMatrix, State.ViewMatrix, Matrix.Identity);
 
-                //List<PickedObject> pickedObjects = ((NewtonPhysics)scene.PhysicsEngine).PickRayCast(
+                //List<PickedObject> pickedObjects = ((MataliPhysics)scene.PhysicsEngine).PickRayCast(
                 //    nearPoint, farPoint);
                 //if (pickedObjects.Count > 0)
                 //{
@@ -238,7 +242,7 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
                 SurfaceFormat.Color, pp.DepthStencilFormat);
 
             // Create a render target to render the VR scene to.
-            vrViewRenderTarget = new RenderTarget2D(State.Device, viewport.Width * 1 / 5, viewport.Height * 1 / 5, false,
+            vrViewRenderTarget = new RenderTarget2D(State.Device, viewport.Width * 3 / 10, viewport.Height * 3 / 10, false,
                 SurfaceFormat.Color, pp.DepthStencilFormat);
 
             // Set the AR scene to take the full window size
@@ -361,13 +365,6 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
         {
             ModelLoader loader = new ModelLoader();
 
-            //Set up crosshairs
-            crosshairs = new GeometryNode("Crosshairs");
-            crosshairs.Model = (Model)loader.Load("", "crosshairs");
-            ((Model)crosshairs.Model).UseInternalMaterials = true;
-
-            scene.RootNode.AddChild(crosshairs);
-
             //set up targets
             string[] ballColors = new string[]{"White", "Red", "Blue"};
             for (int i = 0; i < maxTargets; i++)
@@ -422,15 +419,56 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
 
                 TransformNode barrTransNode = new TransformNode("Trans" + (i+maxTargets))
                 {
-                    Translation = new Vector3((((float)rand.NextDouble() * (max.X - min.X)) + min.X), (((float)rand.NextDouble() * (max.Y - min.Y)) + min.Y), (((float)rand.NextDouble() * (maxZ - (dimension.Y * scale / 2))) + (dimension.Y * scale / 2))),
+                    Translation = new Vector3((((float)rand.NextDouble() * (max.X - min.X)) + min.X), min.Y, (((float)rand.NextDouble() * (maxZ - (dimension.Y * scale / 2))) + (dimension.Y * scale / 2))),
                     Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(0)) *
                         Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
-                    Scale = new Vector3(scale, scale, scale)
+                    Scale = new Vector3(scale, (((float)rand.NextDouble() * 5)) * scale, scale)
                 };
 
                 scene.RootNode.AddChild(barrTransNode);
                 barrTransNode.AddChild(barrier);
             }
+
+            //set up ground plane
+            GeometryNode plane = new GeometryNode("Plane");
+            plane.Model = (Model)loader.Load("", "ground");
+            ((Model)plane.Model).UseInternalMaterials = true;
+
+            // Get the dimension of the model
+            Vector3 planeDimension = Vector3Helper.GetDimensions(plane.Model.MinimumBoundingBox);
+            // Scale the model to fit to the size of 5 markers
+            float planeScale = Math.Max(planeDimension.X, planeDimension.Z)/4;
+
+            TransformNode planeTransNode = new TransformNode("TransPlane")
+            {
+                Translation = new Vector3(0, groundNode.Model.MinimumBoundingBox.Min.Y-50, planeDimension.Z*planeScale/4),
+                Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(5)),
+                Scale = new Vector3(planeScale, planeScale, planeScale)
+            };
+
+            scene.RootNode.AddChild(planeTransNode);
+            planeTransNode.AddChild(plane);
+
+            //set up ground plane
+            GeometryNode background = new GeometryNode("Background");
+            background.Model = (Model)loader.Load("", "ground");
+            ((Model)background.Model).UseInternalMaterials = true;
+
+            // Get the dimension of the model
+            Vector3 backgroundDimension = Vector3Helper.GetDimensions(background.Model.MinimumBoundingBox);
+            // Scale the model to fit to the size of 5 markers
+            float backgroundScale = Math.Max(backgroundDimension.X, backgroundDimension.Z) / 10;
+
+            TransformNode backgroundTransNode = new TransformNode("TransBackground")
+            {
+                Translation = new Vector3(0, 0, 0),
+                Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
+                        Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
+                Scale = new Vector3(backgroundScale, backgroundScale, backgroundScale)
+            };
+
+            scene.RootNode.AddChild(backgroundTransNode);
+            backgroundTransNode.AddChild(background);
         }
 
         public void Dispose()
@@ -461,7 +499,8 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
                 {
                     foreach (GeometryNode child in ((BranchNode)node).Children)
                     {
-                        if (child.Name.Contains("Target") || child.Name.Contains("Barrier"))
+                        if (child.Name.Contains("Target") || child.Name.Contains("Barrier") 
+                            || child.Name.Contains("Plane") || child.Name.Contains("Background"))
                         {
                             scene.RootNode.RemoveChild(child.Parent);
                             groundMarkerNode.AddChild(child.Parent);
@@ -494,7 +533,8 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
                 {
                     foreach (Node child in ((BranchNode)node).Children)
                     {
-                        if (child.Name.Contains("Target") || child.Name.Contains("Barrier"))
+                        if (child.Name.Contains("Target") || child.Name.Contains("Barrier") 
+                            || child.Name.Contains("Plane") || child.Name.Contains("Background"))
                         {
                             groundMarkerNode.RemoveChild(child.Parent);
                             scene.RootNode.AddChild(child.Parent);

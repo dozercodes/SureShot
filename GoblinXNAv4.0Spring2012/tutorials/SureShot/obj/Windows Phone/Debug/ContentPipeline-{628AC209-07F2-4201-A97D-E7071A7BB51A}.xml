@@ -174,6 +174,43 @@
       <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\crosshairs_0.xml</Output>
       <Time>2012-04-30T03:12:19.6457873-04:00</Time>
     </Item>
+    <Item>
+      <Source>ground.fbx</Source>
+      <Name>ground</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\ground.xnb</Output>
+      <Time>2012-05-03T03:51:09.7393009-04:00</Time>
+      <Dependency>
+        <Key>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\ground_0.xml</Key>
+        <Value>2012-05-03T04:10:47.9846927-04:00</Value>
+      </Dependency>
+      <Request>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\grid_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>ground.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\ground_0.xml</Output>
+      <Time>2012-05-03T03:51:09.7393009-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\RAID\Downloads\grid.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\grid_0.xnb</Output>
+      <Time>2012-05-03T04:12:23.0681311-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{628AC209-07F2-4201-A97D-E7071A7BB51A}</ContentProjectGUID>

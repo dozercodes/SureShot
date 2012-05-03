@@ -9,3 +9,5 @@ Content\BallWhite.xnb
 Content\barrier.xnb
 Content\crosshairs.xnb
 Content\wedge_p1_diff_v1_0.xnb
+Content\ground.xnb
+Content\grid_0.xnb
