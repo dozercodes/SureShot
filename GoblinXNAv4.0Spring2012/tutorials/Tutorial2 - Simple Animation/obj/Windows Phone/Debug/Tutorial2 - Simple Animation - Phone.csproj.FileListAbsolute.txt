@@ -14,9 +14,3 @@ C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutor
 ..\..\bin\Windows Phone\
 C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial2 - Simple Animation\..\..\bin\Windows Phone\Tutorial2 - Simple Animation - Phone.xap
 C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial2 - Simple Animation\obj\Windows Phone\Debug\XapCacheFile.xml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial2 - Simple Animation\..\..\bin\Windows Phone\Tutorial2 - Simple Animation - Phone.xap
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial2 - Simple Animation\obj\Windows Phone\Debug\XapCacheFile.xml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial2 - Simple Animation\..\..\bin\Windows Phone\AppManifest.xaml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial2 - Simple Animation\obj\Windows Phone\Debug\WMAppManifest.xml.g
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial2 - Simple Animation\obj\Windows Phone\Debug\WMAppManifest.xml
-..\..\bin\Windows Phone\

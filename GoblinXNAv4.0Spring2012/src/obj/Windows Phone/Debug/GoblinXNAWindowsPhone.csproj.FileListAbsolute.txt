@@ -1,0 +1,6 @@
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\src\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\src\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\bin\Windows Phone\GoblinXNA.dll
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\bin\Windows Phone\GoblinXNA.pdb
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\src\obj\Windows Phone\Debug\GoblinXNA.dll
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\src\obj\Windows Phone\Debug\GoblinXNA.pdb

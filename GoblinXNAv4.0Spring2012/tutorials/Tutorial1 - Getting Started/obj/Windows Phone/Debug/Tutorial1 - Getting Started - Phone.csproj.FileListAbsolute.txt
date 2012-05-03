@@ -12,3 +12,9 @@ C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutor
 ..\..\bin\Windows Phone\
 C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\Tutorial1 - Getting Started - Phone.xap
 C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\Tutorial1 - Getting Started - Phone.xap
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\AppManifest.xaml
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\WMAppManifest.xml
+..\..\bin\Windows Phone\

@@ -1,11 +1,9 @@
-﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Tutorial2 - Simple Animation - Phone" EntryPointType="Tutorial2___Simple_Animation.Tutorial2" RuntimeVersion="3.0">
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Tutorial3 - Simple 2D GUI - Phone" EntryPointType="Tutorial3___Simple_2D_GUI.Tutorial3" RuntimeVersion="3.0">
   <Deployment.Parts>
-    <AssemblyPart x:Name="Tutorial2 - Simple Animation - Phone" Source="Tutorial2 - Simple Animation - Phone.dll" />
+    <AssemblyPart x:Name="Tutorial3 - Simple 2D GUI - Phone" Source="Tutorial3 - Simple 2D GUI - Phone.dll" />
     <AssemblyPart x:Name="GoblinXNA" Source="GoblinXNA.dll" />
-    <AssemblyPart x:Name="NyARToolkit4" Source="NyARToolkit4.dll" />
     <AssemblyPart x:Name="NyARToolkitCS" Source="NyARToolkitCS.dll" />
     <AssemblyPart x:Name="MataliPhysics" Source="MataliPhysics.dll" />
-    <AssemblyPart x:Name="NyARToolkit4.markersystem" Source="NyARToolkit4.markersystem.dll" />
     <AssemblyPart x:Name="Nuclex.Fonts" Source="Nuclex.Fonts.dll" />
   </Deployment.Parts>
 </Deployment>

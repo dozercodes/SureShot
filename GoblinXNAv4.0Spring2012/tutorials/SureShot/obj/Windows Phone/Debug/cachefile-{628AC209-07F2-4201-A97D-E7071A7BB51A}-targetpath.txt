@@ -1,8 +1,11 @@
 Content\ALVARArray.xnb
 Content\crosshair3.xnb
 Content\DebugFont.xnb
+Content\Sample.xnb
 Content\p1_wedge.xnb
-Content\wedge_p1_diff_v1_0.xnb
 Content\BallBlue.xnb
 Content\BallRed.xnb
 Content\BallWhite.xnb
+Content\barrier.xnb
+Content\crosshairs.xnb
+Content\wedge_p1_diff_v1_0.xnb

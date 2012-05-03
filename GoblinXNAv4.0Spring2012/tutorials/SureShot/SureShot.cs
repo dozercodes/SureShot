@@ -35,6 +35,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Media;
+using System.Diagnostics;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -54,6 +55,11 @@ using GoblinXNA.Device.Capture;
 using GoblinXNA.Device.Vision;
 using GoblinXNA.Device.Vision.Marker;
 using GoblinXNA.Device.Util;
+using GoblinXNA.Physics;
+using GoblinXNA.Physics.Matali;
+using Komires.MataliPhysics;
+using MataliPhysicsObject = Komires.MataliPhysics.PhysicsObject;
+
 using GoblinXNA.Helpers;
 using GoblinXNA.UI;
 using GoblinXNA.UI.UI2D;
@@ -73,11 +79,13 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
         bool betterFPS = false; // has trade-off of worse tracking if set to true
 
         Viewport viewport;
+        SpriteFont textFont;
+        IGraphicsDeviceService graphics;
 
+        GeometryNode groundNode;
         GeometryNode markerBoardGeom;
-        GeometryNode target1;
-        GeometryNode target2;
-        GeometryNode target3;
+        GeometryNode crosshairs;
+        GeometryNode pickedNode;
         GeometryNode vrCameraRepNode;
         TransformNode vrCameraRepTransNode;
 
@@ -90,12 +98,14 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
         Rectangle vrViewRect;
 
         Texture2D videoTexture;
+        int maxTargets = 3;
+        int maxBarriers = 10;
 
         float markerSize = 32.4f;
 
         public SureShot()
         {
-            // no contents
+            //no content
         }
 
         public Texture2D VideoBackground
@@ -112,11 +122,12 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             viewport.MinDepth = service.GraphicsDevice.Viewport.MinDepth;
             service.GraphicsDevice.Viewport = viewport;
 
-            //System.IO.FileStream fileStream = new System.IO.FileStream("Content/crosshair3.png", System.IO.FileMode.Open);
-            //Texture2D crosshair = Texture2D.FromStream(service.GraphicsDevice, fileStream);
+            textFont = content.Load<SpriteFont>("Sample");
 
             // Initialize the GoblinXNA framework
             State.InitGoblin(service, content, "");
+
+            graphics = service;
 
             // Initialize the scene graph
             scene = new Scene();
@@ -139,10 +150,41 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             // Create the ground that represents the physical ground marker array
             CreateMarkerBoard();
 
+            // Create the ground that represents the physical ground marker array
+            CreateGround();
+
             // Create 3D objects
             CreateObjects();
 
             State.ShowFPS = true;
+
+            MouseInput.Instance.MousePressEvent += new HandleMousePress(MouseClickHandler);
+        }
+
+        private void MouseClickHandler(int button, Point mouseLocation)
+        {
+            // Shoot a box if left mouse button is clicked
+            if (button == MouseInput.LeftButton)
+            {
+                // 0 means on the near clipping plane, and 1 means on the far clipping plane
+                Vector3 nearSource = new Vector3(mouseLocation.X, mouseLocation.Y, 0);
+                Vector3 farSource = new Vector3(mouseLocation.X, mouseLocation.Y, 1);
+
+                Vector3 nearPoint = graphics.GraphicsDevice.Viewport.Unproject(nearSource,
+                    State.ProjectionMatrix, State.ViewMatrix, Matrix.Identity);
+                Vector3 farPoint = graphics.GraphicsDevice.Viewport.Unproject(farSource,
+                    State.ProjectionMatrix, State.ViewMatrix, Matrix.Identity);
+
+                //List<PickedObject> pickedObjects = ((NewtonPhysics)scene.PhysicsEngine).PickRayCast(
+                //    nearPoint, farPoint);
+                //if (pickedObjects.Count > 0)
+                //{
+                //    // get closes object
+                //    pickedObjects.Sort();
+                //    pickedNode = ((GeometryNode)pickedObjects[0].PickedPhysicsObject.Container);
+                //    groundMarkerNode.RemoveChild(pickedNode);
+                //}
+            }
         }
 
         private void CreateCameras()
@@ -196,7 +238,7 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
                 SurfaceFormat.Color, pp.DepthStencilFormat);
 
             // Create a render target to render the VR scene to.
-            vrViewRenderTarget = new RenderTarget2D(State.Device, viewport.Width * 2 / 5, viewport.Height * 2 / 5, false,
+            vrViewRenderTarget = new RenderTarget2D(State.Device, viewport.Width * 1 / 5, viewport.Height * 1 / 5, false,
                 SurfaceFormat.Color, pp.DepthStencilFormat);
 
             // Set the AR scene to take the full window size
@@ -287,62 +329,108 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             camOffset.AddChild(vrCameraRepNode);
         }
 
+        private void CreateGround()
+        {
+            groundNode = new GeometryNode("Ground");
+
+            // We will use TexturedBox instead of regular Box class since we will need the
+            // texture coordinates elements for passing the vertices to the SimpleShadowShader
+            // we will be using
+            groundNode.Model = new TexturedBox(330, 190, 0.1f);
+
+            // Set this ground model to act as an occluder so that it appears transparent
+            groundNode.IsOccluder = true;
+
+            // Make the ground model to receive shadow casted by other objects with
+            // ShadowAttribute.ReceiveCast
+            groundNode.Model.ShadowAttribute = ShadowAttribute.ReceiveOnly;
+            // Assign a shadow shader for this model that uses the IShadowMap we assigned to the scene
+            //groundNode.Model.Shader = new SimpleShadowShader(scene.ShadowMap);
+
+            Material groundMaterial = new Material();
+            groundMaterial.Diffuse = Color.Gray.ToVector4();
+            groundMaterial.Specular = Color.White.ToVector4();
+            groundMaterial.SpecularPower = 20;
+
+            groundNode.Material = groundMaterial;
+
+            groundMarkerNode.AddChild(groundNode);
+        }
+
         private void CreateObjects()
         {
             ModelLoader loader = new ModelLoader();
 
-            target1 = new GeometryNode("Ball1");
-            target1.Model = (Model)loader.Load("", "BallWhite");
-            ((Model)target1.Model).UseInternalMaterials = true;
+            //Set up crosshairs
+            crosshairs = new GeometryNode("Crosshairs");
+            crosshairs.Model = (Model)loader.Load("", "crosshairs");
+            ((Model)crosshairs.Model).UseInternalMaterials = true;
 
-            target2 = new GeometryNode("Ball2");
-            target2.Model = (Model)loader.Load("", "BallRed");
-            ((Model)target2.Model).UseInternalMaterials = true;
+            scene.RootNode.AddChild(crosshairs);
 
-            target3 = new GeometryNode("Ball3");
-            target3.Model = (Model)loader.Load("", "BallBlue");
-            ((Model)target3.Model).UseInternalMaterials = true;
+            //set up targets
+            string[] ballColors = new string[]{"White", "Red", "Blue"};
+            for (int i = 0; i < maxTargets; i++)
+            {
+                GeometryNode target = new GeometryNode("Target" + i);
+                target.Model = (Model)loader.Load("", "Ball" + ballColors[i % ballColors.Length]);
+                ((Model)target.Model).UseInternalMaterials = true;
+                target.Physics.Shape = GoblinXNA.Physics.ShapeType.Sphere;
+                target.Physics.Pickable = true;
+                target.AddToPhysicsEngine = true;
 
-            // Get the dimension of the model
-            Vector3 dimension = Vector3Helper.GetDimensions(target1.Model.MinimumBoundingBox);
-            // Scale the model to fit to the size of 5 markers
-            float scale = markerSize / Math.Max(dimension.X, dimension.Z);
+                // Get the dimension of the model
+                Vector3 dimension = Vector3Helper.GetDimensions(target.Model.MinimumBoundingBox);
+                // Scale the model to fit to the size of 5 markers
+                float scale = markerSize / Math.Max(dimension.X, dimension.Z);
+
+                Random rand = new Random();
+                Vector3 min = groundNode.Model.MinimumBoundingBox.Min;
+                Vector3 max = groundNode.Model.MinimumBoundingBox.Max;
+
+                TransformNode tarTransNode = new TransformNode("Trans" + i)
+                {
+                    Translation = new Vector3((((float)rand.NextDouble() * (max.X - min.X)) + min.X), (((float)rand.NextDouble() * (max.Y - min.Y)) + min.Y), dimension.Y * scale / 2),
+                    Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
+                        Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
+                    Scale = new Vector3(scale, scale, scale)
+                };
+
+                scene.RootNode.AddChild(tarTransNode);
+                tarTransNode.AddChild(target);
+            }
             
-            Random rand = new Random();
-            float range = 4 * markerSize;
-            //USE Bounding Box
-            TransformNode tar1TransNode = new TransformNode()
+            //set up barriers
+            for (int i = 0; i < maxBarriers; i++)
             {
-                Translation = new Vector3((float)rand.NextDouble(), (float)rand.NextDouble() * range, dimension.Y * scale / 2),
-                Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
-                    Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
-                Scale = new Vector3(scale, scale, scale)
-            };
+                GeometryNode barrier = new GeometryNode("Barrier" + i);
+                barrier.Model = (Model)loader.Load("", "barrier");
+                ((Model)barrier.Model).UseInternalMaterials = true;
+                barrier.Physics.Shape = GoblinXNA.Physics.ShapeType.Sphere;
+                barrier.Physics.Pickable = true;
+                barrier.AddToPhysicsEngine = true;
 
-            scene.RootNode.AddChild(tar1TransNode);
-            tar1TransNode.AddChild(target1);
+                // Get the dimension of the model
+                Vector3 dimension = Vector3Helper.GetDimensions(barrier.Model.MinimumBoundingBox);
+                // Scale the model to fit to the size of 5 markers
+                float scale = markerSize / Math.Max(dimension.X, dimension.Z) * 1.5f;
 
-            TransformNode tar2TransNode = new TransformNode()
-            {
-                Translation = new Vector3((float)rand.NextDouble() * range, (float)rand.NextDouble() * range, dimension.Y * scale / 2),
-                Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
-                    Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
-                Scale = new Vector3(scale, scale, scale)
-            };
+                Random rand = new Random();
+                Vector3 min = groundNode.Model.MinimumBoundingBox.Min;
+                Vector3 max = groundNode.Model.MinimumBoundingBox.Max;
+                float maxZ = 300;
 
-            scene.RootNode.AddChild(tar2TransNode);
-            tar2TransNode.AddChild(target2);
+                TransformNode barrTransNode = new TransformNode("Trans" + (i+maxTargets))
+                {
+                    Translation = new Vector3((((float)rand.NextDouble() * (max.X - min.X)) + min.X), (((float)rand.NextDouble() * (max.Y - min.Y)) + min.Y), (((float)rand.NextDouble() * (maxZ - (dimension.Y * scale / 2))) + (dimension.Y * scale / 2))),
+                    Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(0)) *
+                        Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
+                    Scale = new Vector3(scale, scale, scale)
+                };
 
-            TransformNode tar3TransNode = new TransformNode()
-            {
-                Translation = new Vector3((float)rand.NextDouble() * range, (float)rand.NextDouble() * range, dimension.Y * scale / 2),
-                Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
-                    Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
-                Scale = new Vector3(scale, scale, scale)
-            };
-
-            scene.RootNode.AddChild(tar3TransNode);
-            tar3TransNode.AddChild(target3);
+                scene.RootNode.AddChild(barrTransNode);
+                barrTransNode.AddChild(barrier);
+            }
         }
 
         public void Dispose()
@@ -359,7 +447,6 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
         {
             // Reset the XNA viewport to our centered and resized viewport
             State.Device.Viewport = viewport;
-
             // Set the render target for rendering the AR scene
             scene.SceneRenderTarget = arViewRenderTarget;
             scene.BackgroundColor = Color.Black;
@@ -368,22 +455,30 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             // Set the camera to be the AR camera
             scene.CameraNode = arCameraNode;
             // Associate the overlaid model with the ground marker for rendering it in AR scene
-            scene.RootNode.RemoveChild(target1.Parent);
-            groundMarkerNode.AddChild(target1.Parent);
-            scene.RootNode.RemoveChild(target2.Parent);
-            groundMarkerNode.AddChild(target2.Parent);
-            scene.RootNode.RemoveChild(target3.Parent);
-            groundMarkerNode.AddChild(target3.Parent);
+            foreach (Node node in scene.RootNode.Children)
+            {
+                if (node.Name.Contains("Trans"))
+                {
+                    foreach (GeometryNode child in ((BranchNode)node).Children)
+                    {
+                        if (child.Name.Contains("Target") || child.Name.Contains("Barrier"))
+                        {
+                            scene.RootNode.RemoveChild(child.Parent);
+                            groundMarkerNode.AddChild(child.Parent);
+                        }
+                    }
+                }
+            }
             // Don't render the marker board and camera representation
             markerBoardGeom.Enabled = false;
             vrCameraRepNode.Enabled = false;
             // Show the video background
             scene.BackgroundTexture = videoTexture;
             
-            UI2DRenderer.DrawCircle(new Point(0, 0), 1, Color.Aqua);
+            UI2DRenderer.DrawCircle(new Point(0, 0), 2, Color.Aqua);
+            UI2DRenderer.WriteText(Vector2.Zero, "This is a test", Color.White, textFont);
             // Render the AR scene
             scene.Draw(elapsedTime, false);
-
             
             // Set the render target for rendering the VR scene
             scene.SceneRenderTarget = vrViewRenderTarget;
@@ -393,12 +488,20 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             // Set the camera to be the VR camera
             scene.CameraNode = vrCameraNode;
             // Remove the overlaid model from the ground marker for rendering it in VR scene
-            groundMarkerNode.RemoveChild(target1.Parent);
-            scene.RootNode.AddChild(target1.Parent);
-            groundMarkerNode.RemoveChild(target2.Parent);
-            scene.RootNode.AddChild(target2.Parent);
-            groundMarkerNode.RemoveChild(target3.Parent);
-            scene.RootNode.AddChild(target3.Parent);
+            foreach (Node node in groundMarkerNode.Children)
+            {
+                if (node.Name.Contains("Trans"))
+                {
+                    foreach (Node child in ((BranchNode)node).Children)
+                    {
+                        if (child.Name.Contains("Target") || child.Name.Contains("Barrier"))
+                        {
+                            groundMarkerNode.RemoveChild(child.Parent);
+                            scene.RootNode.AddChild(child.Parent);
+                        }
+                    }
+                }
+            }
             // Render the marker board and camera representation in VR scene
             markerBoardGeom.Enabled = true;
             vrCameraRepNode.Enabled = true;
@@ -421,7 +524,7 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             // Render the two textures rendered on the render targets
             State.SharedSpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Opaque);
             State.SharedSpriteBatch.Draw(arViewRenderTarget, arViewRect, Color.White);
-            //State.SharedSpriteBatch.Draw(vrViewRenderTarget, vrViewRect, Color.White);
+            State.SharedSpriteBatch.Draw(vrViewRenderTarget, vrViewRect, Color.White);
             State.SharedSpriteBatch.End();
 
             // Reset the adjustments

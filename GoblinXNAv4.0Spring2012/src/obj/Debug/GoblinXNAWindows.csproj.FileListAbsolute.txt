@@ -1,0 +1,6 @@
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\bin\x86\GoblinXNA.XML
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\bin\x86\GoblinXNA.dll
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\bin\x86\GoblinXNA.pdb
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\src\obj\Debug\ResolveAssemblyReference.cache
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\src\obj\Debug\GoblinXNA.dll
+C:\users\raid\documents\courses\git repos\sureshot\goblinxnav4.0spring2012\src\obj\Debug\GoblinXNA.pdb

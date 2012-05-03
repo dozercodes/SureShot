@@ -315,7 +315,7 @@ namespace Tutorial9___Advanced_Features
             Random rand = new Random();
 
             // Create bunch of sphere models and pile them up
-            for (int i = 0; i <= 0; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 for (int j = -1; j <= 1; j++)
                 {
