@@ -78,7 +78,6 @@ namespace GoblinXNA.Device.Generic
 
         bool isAvailable;
         bool areGesturesEnabled;
-        private static TouchInput input;
 
         #endregion
 
@@ -129,18 +128,7 @@ namespace GoblinXNA.Device.Generic
         {
             get{return TouchPanel.IsGestureAvailable;}
         }
-        public static TouchInput Instance
-        {
-            get
-            {
-                if (input == null)
-                {
-                    input = new TouchInput();
-                }
 
-                return input;
-            }
-        }
         #endregion
 
         #region Public Methods

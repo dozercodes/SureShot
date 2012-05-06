@@ -3,8 +3,10 @@
     <AssemblyPart x:Name="Tutorial16 - Multiple Viewport - Phone" Source="Tutorial16 - Multiple Viewport - Phone.dll" />
     <AssemblyPart x:Name="Tutorial16 - Multiple Viewport - PhoneLib" Source="Tutorial16 - Multiple Viewport - PhoneLib.dll" />
     <AssemblyPart x:Name="GoblinXNA" Source="GoblinXNA.dll" />
+    <AssemblyPart x:Name="NyARToolkit4" Source="NyARToolkit4.dll" />
     <AssemblyPart x:Name="NyARToolkitCS" Source="NyARToolkitCS.dll" />
     <AssemblyPart x:Name="MataliPhysics" Source="MataliPhysics.dll" />
+    <AssemblyPart x:Name="NyARToolkit4.markersystem" Source="NyARToolkit4.markersystem.dll" />
     <AssemblyPart x:Name="Nuclex.Fonts" Source="Nuclex.Fonts.dll" />
   </Deployment.Parts>
 </Deployment>

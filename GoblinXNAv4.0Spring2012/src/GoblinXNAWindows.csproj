@@ -86,6 +86,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dlls\managed\Nuclex.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="NyARToolkit4">
+      <HintPath>..\dlls\managed\NyARToolkit4.dll</HintPath>
+    </Reference>
+    <Reference Include="NyARToolkit4.markersystem">
+      <HintPath>..\dlls\managed\NyARToolkit4.markersystem.dll</HintPath>
+    </Reference>
     <Reference Include="NyARToolkitCS">
       <HintPath>..\dlls\managed\NyARToolkitCS.dll</HintPath>
     </Reference>
@@ -140,6 +146,7 @@
     <Compile Include="Device\Vision\Marker\MarkerDetector.cs" />
     <Compile Include="Device\Vision\Marker\MarkerException.cs" />
     <Compile Include="Device\Util\DESSmoother.cs" />
+    <Compile Include="Device\Vision\Marker\NyARToolkitIdTracker.cs" />
     <Compile Include="Device\Vision\Marker\NyARToolkitTracker.cs" />
     <Compile Include="Device\Vision\Marker\Threshold.cs" />
     <Compile Include="GoblinEnums.cs" />

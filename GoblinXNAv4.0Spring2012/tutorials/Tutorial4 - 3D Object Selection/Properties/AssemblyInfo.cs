@@ -1,27 +1,29 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tutorial4 - 3D Object Selection")]
-[assembly: AssemblyProduct("Tutorial4 - 3D Object Selection")]
+[assembly: AssemblyTitle("Tutorial4 - 3D Object Selection - Phone")]
+[assembly: AssemblyProduct("Tutorial4 - 3D Object Selection - Phone")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("Columbia University")]
-
-[assembly: AssemblyCopyright("Copyright © Columbia University 2008")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type.
+// COM, set the ComVisible attribute to true on that type. Only Windows
+// assemblies support COM.
 [assembly: ComVisible(false)]
 
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("583a9366-4e75-4982-ad91-8b23f80afede")]
-
+// On Windows, the following GUID is for the ID of the typelib if this
+// project is exposed to COM. On other platforms, it unique identifies the
+// title storage container when deploying this assembly to the device.
+[assembly: Guid("4bd0956e-fc3f-42da-922a-b6cad71a62c8")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -31,3 +33,4 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 [assembly: AssemblyVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguageAttribute("en-US")]

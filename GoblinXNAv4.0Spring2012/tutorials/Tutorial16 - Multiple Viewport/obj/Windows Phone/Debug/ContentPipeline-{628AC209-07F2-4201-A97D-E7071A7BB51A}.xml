@@ -7,41 +7,41 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\ALVARArray.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\ALVARArray.xnb</Output>
       <Time>2012-02-17T13:16:12-05:00</Time>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Fonts\DebugFont.spritefont</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Fonts\DebugFont.spritefont</Source>
       <Name>DebugFont</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\DebugFont.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\DebugFont.xnb</Output>
       <Time>2011-10-10T10:41:14-04:00</Time>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\p1_wedge.fbx</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\p1_wedge.fbx</Source>
       <Name>p1_wedge</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\p1_wedge.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\p1_wedge.xnb</Output>
       <Time>2011-10-10T10:41:10-04:00</Time>
       <Dependency>
-        <Key>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\p1_wedge_0.xml</Key>
-        <Value>2012-05-02T19:39:20.5335361-04:00</Value>
+        <Key>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\p1_wedge_0.xml</Key>
+        <Value>2012-05-04T01:26:44.344466-04:00</Value>
       </Dependency>
-      <Request>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\wedge_p1_diff_v1_0.xnb</Request>
+      <Request>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\wedge_p1_diff_v1_0.xnb</Request>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\p1_wedge.fbx</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\p1_wedge.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\p1_wedge_0.xml</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\p1_wedge_0.xml</Output>
       <Time>2011-10-10T10:41:10-04:00</Time>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\textures\wedge_p1_diff_v1.tga</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\textures\wedge_p1_diff_v1.tga</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -53,7 +53,7 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\wedge_p1_diff_v1_0.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\wedge_p1_diff_v1_0.xnb</Output>
       <Time>2011-11-22T12:30:02-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -63,10 +63,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial16 - Multiple Viewport\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial16 - Multiple Viewport\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

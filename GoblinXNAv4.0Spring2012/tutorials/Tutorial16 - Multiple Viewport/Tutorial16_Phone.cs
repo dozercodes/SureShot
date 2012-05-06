@@ -57,6 +57,10 @@ using GoblinXNA.Device.Util;
 using GoblinXNA.Helpers;
 using GoblinXNA.UI;
 using GoblinXNA.UI.UI2D;
+using GoblinXNA.Physics;
+using GoblinXNA.Physics.Matali;
+using Komires.MataliPhysics;
+using MataliPhysicsObject = Komires.MataliPhysics.PhysicsObject;
 
 using Tutorial16___Multiple_Viewport;
 
@@ -115,6 +119,12 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
 
             // Initialize the scene graph
             scene = new Scene();
+
+            scene.PhysicsEngine = new MataliPhysics();
+
+            ((MataliPhysics)scene.PhysicsEngine).SimulationTimeStep = 1 / 30f;
+            
+            State.ThreadOption = (ushort)ThreadOptions.MarkerTracking;
 
             // Set up the lights used in the scene
             CreateLights();

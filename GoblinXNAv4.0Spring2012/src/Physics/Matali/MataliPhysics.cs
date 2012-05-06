@@ -1,5 +1,5 @@
 ﻿/************************************************************************************ 
- * Copyright (c) 2008-2011, Columbia University
+ * Copyright (c) 2008-2012, Columbia University
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -64,12 +64,15 @@ namespace GoblinXNA.Physics.Matali
     {
         #region Member Fields
 
+        protected List<PickedObject> pickedObjects;
+
         protected Vector3 gravityDir;
 
         private bool pauseSimulation;
 
         private PhysicsEngine engine;
         private PhysicsScene scene;
+        private MataliPhysicsObject obj;
 
         private Dictionary<IPhysicsObject, MataliPhysicsObject> objectIDs;
         private Dictionary<MataliPhysicsObject, Dictionary<MataliPhysicsObject, bool>> collisionTable;
@@ -122,6 +125,8 @@ namespace GoblinXNA.Physics.Matali
             tempMat3 = Matrix.Identity;
 
             buildCollisionMesh = false;
+
+            pickedObjects = new List<PickedObject>();
         }
 
         #endregion
@@ -486,6 +491,19 @@ namespace GoblinXNA.Physics.Matali
             return objectIDs[physObj];
         }
 
+        public IPhysicsObject GetIPhysicsObject(MataliPhysicsObject matPhysObj)
+        {
+            foreach (KeyValuePair<IPhysicsObject, MataliPhysicsObject> pair in objectIDs)
+            {
+                if (matPhysObj.Equals(pair.Value))
+                {
+                    return pair.Key;
+                }
+            }
+
+            return null;
+        }
+
         /// <summary>
         /// Creates a constraint between two existing physical objects.
         /// </summary>
@@ -534,6 +552,39 @@ namespace GoblinXNA.Physics.Matali
             }
 
             mataliPhysicsObj.InternalControllers.HeightmapController.UpdateBounding();
+        }
+
+        /// <summary>
+        /// Performs raycast picking with the given near and far points.
+        /// </summary>
+        /// <param name="nearPoint">The near point of the pick ray</param>
+        /// <param name="farPoint">The far point of the pick ray</param>
+        /// <returns>A list of picked objects</returns>
+        public List<PickedObject> PickRayCast(Vector3 nearPoint, Vector3 farPoint)
+        {
+            pickedObjects.Clear();
+
+            Vector3 rayDirection = (farPoint - nearPoint);
+            rayDirection.Normalize();
+            scene.UpdatePhysicsObjectsIntersectedByRay(ref nearPoint, ref rayDirection, 0, false);
+            int objectsCollided = scene.IntersectedPhysicsObjectsCount;
+
+            Vector3 hitPosition = Vector3.Zero;
+
+            for (int i = 0; i < objectsCollided; i++)
+            {
+
+                MataliPhysicsObject obj = scene.GetIntersectedPhysicsObject(i, ref hitPosition);
+
+                IPhysicsObject physObj = GetIPhysicsObject(obj);
+                if (physObj != null && physObj.Pickable)
+                {
+                    PickedObject pickedObject = new PickedObject(physObj, i);
+                    pickedObjects.Add(pickedObject);
+                }
+            }
+
+            return pickedObjects;
         }
 
         /// <summary>
@@ -992,7 +1043,7 @@ namespace GoblinXNA.Physics.Matali
         private void UpdateTransforms(SimulateMethodArgs args)
         {
             MataliPhysicsObject mataliPhysicsObj = scene.Factory.PhysicsObjectManager.Get(args.OwnerIndex);
-
+            
             mataliPhysicsObj.MainWorldTransform.GetTransformMatrix(ref tempMat1);
             ((IPhysicsObject)mataliPhysicsObj.UserTagObj).PhysicsWorldTransform = tempMat1;
         }

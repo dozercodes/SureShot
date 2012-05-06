@@ -29,6 +29,7 @@
     <NoStdLib>true</NoStdLib>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <XnaCompressContent>false</XnaCompressContent>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Windows Phone' ">
     <DebugType>pdbonly</DebugType>
@@ -76,6 +77,12 @@
     <Reference Include="Nuclex.Fonts">
       <HintPath>..\dlls\managed\Windows Phone\Nuclex.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="NyARToolkit4">
+      <HintPath>..\dlls\managed\Windows Phone\NyARToolkit4.dll</HintPath>
+    </Reference>
+    <Reference Include="NyARToolkit4.markersystem">
+      <HintPath>..\dlls\managed\Windows Phone\NyARToolkit4.markersystem.dll</HintPath>
+    </Reference>
     <Reference Include="NyARToolkitCS">
       <HintPath>..\dlls\managed\Windows Phone\NyARToolkitCS.dll</HintPath>
     </Reference>
@@ -122,6 +129,7 @@
     <Compile Include="Device\Vision\Marker\IMarkerTracker.cs" />
     <Compile Include="Device\Vision\Marker\MarkerDetector.cs" />
     <Compile Include="Device\Vision\Marker\MarkerException.cs" />
+    <Compile Include="Device\Vision\Marker\NyARToolkitIdTracker.cs" />
     <Compile Include="Device\Vision\Marker\NyARToolkitTracker.cs">
       <SubType>Code</SubType>
     </Compile>

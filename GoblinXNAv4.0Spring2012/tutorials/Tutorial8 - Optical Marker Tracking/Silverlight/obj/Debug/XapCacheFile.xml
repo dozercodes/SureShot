@@ -1,51 +1,54 @@
-﻿<xapCache source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\..\..\bin\Windows Phone\Tutorial8___Optical_Marker_Tracking___Phone.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="5/2/2012 9:15:36 PM">
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\..\..\bin\Windows Phone\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="5/2/2012 9:15:36 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\Background.png" archivePath="Background.png" lastWriteTime="10/24/2011 3:13:22 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="10/24/2011 3:13:22 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\obj\Debug\Tutorial8 - Optical Marker Tracking - Silverlight.dll" archivePath="Tutorial8 - Optical Marker Tracking - Silverlight.dll" lastWriteTime="5/2/2012 9:15:35 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial8 - Optical Marker Tracking - PhoneLib.dll" archivePath="Tutorial8 - Optical Marker Tracking - PhoneLib.dll" lastWriteTime="5/2/2012 7:58:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\GoblinXNA.dll" archivePath="GoblinXNA.dll" lastWriteTime="4/30/2012 5:20:32 AM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\NyARToolkitCS.dll" archivePath="NyARToolkitCS.dll" lastWriteTime="10/10/2011 10:42:36 AM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\MataliPhysics.dll" archivePath="MataliPhysics.dll" lastWriteTime="10/19/2011 9:00:00 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Nuclex.Fonts.dll" archivePath="Nuclex.Fonts.dll" lastWriteTime="3/4/2011 8:00:36 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="10/24/2011 3:13:22 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="5/2/2012 9:15:36 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Content\DebugFont.xnb" archivePath="Content\DebugFont.xnb" lastWriteTime="5/2/2012 7:39:19 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Content\Sample.xnb" archivePath="Content\Sample.xnb" lastWriteTime="5/2/2012 7:38:05 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Content\MarkerImage_320x240.xnb" archivePath="Content\MarkerImage_320x240.xnb" lastWriteTime="4/26/2012 7:20:15 AM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\NyARToolkitGroundArray.xml" archivePath="NyARToolkitGroundArray.xml" lastWriteTime="1/25/2012 1:53:04 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\camera_para.dat" archivePath="camera_para.dat" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker0.patt" archivePath="marker0.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker1.patt" archivePath="marker1.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker10.patt" archivePath="marker10.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker11.patt" archivePath="marker11.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker12.patt" archivePath="marker12.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker13.patt" archivePath="marker13.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker14.patt" archivePath="marker14.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker15.patt" archivePath="marker15.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker16.patt" archivePath="marker16.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker17.patt" archivePath="marker17.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker18.patt" archivePath="marker18.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker19.patt" archivePath="marker19.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker2.patt" archivePath="marker2.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker20.patt" archivePath="marker20.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker21.patt" archivePath="marker21.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker22.patt" archivePath="marker22.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker23.patt" archivePath="marker23.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker24.patt" archivePath="marker24.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker25.patt" archivePath="marker25.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker26.patt" archivePath="marker26.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker27.patt" archivePath="marker27.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker28.patt" archivePath="marker28.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker29.patt" archivePath="marker29.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker3.patt" archivePath="marker3.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker30.patt" archivePath="marker30.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker4.patt" archivePath="marker4.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker5.patt" archivePath="marker5.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker6.patt" archivePath="marker6.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker7.patt" archivePath="marker7.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker8.patt" archivePath="marker8.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\marker9.patt" archivePath="marker9.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\patt.hiro" archivePath="patt.hiro" lastWriteTime="10/10/2011 10:40:42 AM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\MarkerImageHiro.jpg" archivePath="MarkerImageHiro.jpg" lastWriteTime="10/10/2011 10:40:42 AM" />
+﻿<xapCache source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\..\..\bin\Windows Phone\Tutorial8___Optical_Marker_Tracking___Phone.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="5/4/2012 5:13:23 AM">
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\..\..\bin\Windows Phone\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="5/4/2012 5:13:22 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\Background.png" archivePath="Background.png" lastWriteTime="10/24/2011 3:13:22 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="10/24/2011 3:13:22 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\obj\Debug\Tutorial8 - Optical Marker Tracking - Silverlight.dll" archivePath="Tutorial8 - Optical Marker Tracking - Silverlight.dll" lastWriteTime="5/3/2012 11:14:19 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Tutorial8 - Optical Marker Tracking - PhoneLib.dll" archivePath="Tutorial8 - Optical Marker Tracking - PhoneLib.dll" lastWriteTime="4/24/2012 12:46:37 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\GoblinXNA.dll" archivePath="GoblinXNA.dll" lastWriteTime="4/24/2012 12:38:32 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\NyARToolkit4.dll" archivePath="NyARToolkit4.dll" lastWriteTime="4/17/2012 5:39:20 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\NyARToolkitCS.dll" archivePath="NyARToolkitCS.dll" lastWriteTime="10/10/2011 10:42:36 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\MataliPhysics.dll" archivePath="MataliPhysics.dll" lastWriteTime="10/19/2011 9:00:00 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\NyARToolkit4.markersystem.dll" archivePath="NyARToolkit4.markersystem.dll" lastWriteTime="4/17/2012 5:41:18 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Nuclex.Fonts.dll" archivePath="Nuclex.Fonts.dll" lastWriteTime="3/4/2011 8:00:36 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial8 - Optical Marker Tracking\Silverlight\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="10/24/2011 3:13:22 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="5/4/2012 5:13:22 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\DebugFont.xnb" archivePath="Content\DebugFont.xnb" lastWriteTime="5/4/2012 1:26:23 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\Sample.xnb" archivePath="Content\Sample.xnb" lastWriteTime="5/4/2012 1:26:23 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\MarkerImage_320x240.xnb" archivePath="Content\MarkerImage_320x240.xnb" lastWriteTime="5/3/2012 11:14:18 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\NyARIdGroundArray.xml" archivePath="NyARIdGroundArray.xml" lastWriteTime="4/23/2012 4:39:00 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\NyARToolkitGroundArray.xml" archivePath="NyARToolkitGroundArray.xml" lastWriteTime="1/25/2012 1:53:04 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\camera_para.dat" archivePath="camera_para.dat" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker0.patt" archivePath="marker0.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker1.patt" archivePath="marker1.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker10.patt" archivePath="marker10.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker11.patt" archivePath="marker11.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker12.patt" archivePath="marker12.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker13.patt" archivePath="marker13.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker14.patt" archivePath="marker14.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker15.patt" archivePath="marker15.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker16.patt" archivePath="marker16.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker17.patt" archivePath="marker17.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker18.patt" archivePath="marker18.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker19.patt" archivePath="marker19.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker2.patt" archivePath="marker2.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker20.patt" archivePath="marker20.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker21.patt" archivePath="marker21.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker22.patt" archivePath="marker22.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker23.patt" archivePath="marker23.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker24.patt" archivePath="marker24.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker25.patt" archivePath="marker25.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker26.patt" archivePath="marker26.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker27.patt" archivePath="marker27.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker28.patt" archivePath="marker28.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker29.patt" archivePath="marker29.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker3.patt" archivePath="marker3.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker30.patt" archivePath="marker30.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker4.patt" archivePath="marker4.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker5.patt" archivePath="marker5.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker6.patt" archivePath="marker6.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker7.patt" archivePath="marker7.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker8.patt" archivePath="marker8.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker9.patt" archivePath="marker9.patt" lastWriteTime="1/25/2012 1:48:14 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\patt.hiro" archivePath="patt.hiro" lastWriteTime="10/10/2011 10:40:42 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\MarkerImageHiro.jpg" archivePath="MarkerImageHiro.jpg" lastWriteTime="10/10/2011 10:40:42 AM" />
 </xapCache>

@@ -2,12 +2,12 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Fonts\DebugFont.spritefont</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Fonts\DebugFont.spritefont</Source>
       <Name>DebugFont</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\DebugFont.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\DebugFont.xnb</Output>
       <Time>2011-10-10T10:41:14-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -17,10 +17,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial5 - Simple Physics\Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial5 - Simple Physics\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial5 - Simple Physics\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial5 - Simple Physics\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial5 - Simple Physics\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial5 - Simple Physics\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

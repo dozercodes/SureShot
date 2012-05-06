@@ -1,6 +1,12 @@
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\SkinnedModelPhone.dll
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\SkinnedModelPhone.pdb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\SkinnedModelPhone.dll
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\SkinnedModelPhone.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\SkinnedModelPhone.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\SkinnedModelPhone.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\SkinnedModelPhone.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\SkinnedModelPhone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\SkinnedModelPhone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\SkinnedModelPhone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\SkinnedModelPhone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SkinnedModelWindows\obj\Windows Phone\Debug\SkinnedModelPhone.pdb

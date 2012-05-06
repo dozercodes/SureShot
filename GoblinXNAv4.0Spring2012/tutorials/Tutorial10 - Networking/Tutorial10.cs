@@ -241,6 +241,7 @@ namespace Tutorial10___Networking
 
             // Create a light node to hold the light source
             LightNode lightNode = new LightNode();
+            lightNode.AmbientLightColor = new Vector4(0.2f, 0.2f, 0.2f, 1);
             lightNode.LightSource = lightSource;
 
             // Add this light node to the root node

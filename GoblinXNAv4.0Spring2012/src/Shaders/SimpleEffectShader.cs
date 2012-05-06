@@ -1,5 +1,5 @@
 /************************************************************************************ 
- * Copyright (c) 2008-2011, Columbia University
+ * Copyright (c) 2008-2012, Columbia University
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -84,6 +84,7 @@ namespace GoblinXNA.Shaders
             lightSources = new List<LightSource>();
             ambientLight = Vector3.Zero;
             originalAlphas = new Dictionary<Effect, float>();
+            MixMaterialDiffuseWithTexture = false;
         }
         #endregion
 
@@ -118,6 +119,17 @@ namespace GoblinXNA.Shaders
             get { return basicEffect.PreferPerPixelLighting; }
             set { basicEffect.PreferPerPixelLighting = value; }
         }
+
+        /// <summary>
+        /// Indicates whether you want to multiply the diffuse color of the material with the diffuse
+        /// color of the texture if Model.UseInternalMaterials is set to true. Default value is false.
+        /// </summary>
+        public bool MixMaterialDiffuseWithTexture
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region IAlphaBlendable implementations
@@ -139,6 +151,8 @@ namespace GoblinXNA.Shaders
                 {
                     internalEffect = (BasicEffect)material.InternalEffect;
                     internalEffect.Alpha = originalAlphas[internalEffect] * material.Diffuse.W;
+                    if (MixMaterialDiffuseWithTexture)
+                        internalEffect.DiffuseColor *= Vector3Helper.GetVector3(material.Diffuse);
 
                     if (lightsChanged)
                     {

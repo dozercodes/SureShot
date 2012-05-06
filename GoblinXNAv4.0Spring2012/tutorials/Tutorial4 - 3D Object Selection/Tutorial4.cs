@@ -44,7 +44,11 @@ using GoblinXNA.Graphics;
 using GoblinXNA.Graphics.Geometry;
 using GoblinXNA.Device.Generic;
 using GoblinXNA.Physics;
+#if WINDOWS
 using GoblinXNA.Physics.Newton1;
+#else
+using GoblinXNA.Physics.Matali;
+#endif
 using GoblinXNA.UI.UI2D;
 
 namespace Tutorial4___3D_Object_Selection
@@ -64,6 +68,13 @@ namespace Tutorial4___3D_Object_Selection
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+#if WINDOWS_PHONE
+            // Extend battery life under lock.
+            InactiveSleepTime = TimeSpan.FromSeconds(1);
+
+            graphics.IsFullScreen = true;
+#endif
         }
 
         /// <summary>
@@ -91,10 +102,17 @@ namespace Tutorial4___3D_Object_Selection
             // GraphicsDevice.Clear(...) is called by Scene object with this color. 
             scene.BackgroundColor = Color.CornflowerBlue;
 
+#if WINDOWS
             // We will use the Newton physics engine (http://www.newtondynamics.com)
             // for processing the intersection of cast rays with
             // 3D objects to detect object selection. 
             scene.PhysicsEngine = new NewtonPhysics();
+#else
+            // We will use the Matali physics engine ()
+            // for processing the intersection of cast rays with
+            // 3D objects to detect object selection. 
+            scene.PhysicsEngine = new MataliPhysics();
+#endif
 
             // Set up the lights used in the scene
             CreateLights();
@@ -292,8 +310,13 @@ namespace Tutorial4___3D_Object_Selection
 
                 // Have the physics engine intersect the pick ray defined by the nearPoint and farPoint with
                 // the physics objects in the scene (which we have set up to approximate the model geometry).
+#if WINDOWS
                 List<PickedObject> pickedObjects = ((NewtonPhysics)scene.PhysicsEngine).PickRayCast(
                     nearPoint, farPoint);
+#else
+                List<PickedObject> pickedObjects = ((MataliPhysics)scene.PhysicsEngine).PickRayCast(
+                    nearPoint, farPoint);
+#endif
 
                 // If one or more objects intersect with our ray vector
                 if (pickedObjects.Count > 0)
@@ -341,10 +364,12 @@ namespace Tutorial4___3D_Object_Selection
             Content.Unload();
         }
 
+#if !WINDOWS_PHONE
         protected override void Dispose(bool disposing)
         {
             scene.Dispose();
         }
+#endif
 
         /// <summary>
         /// Allows the game to run logic such as updating the world,
@@ -353,6 +378,16 @@ namespace Tutorial4___3D_Object_Selection
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+#if WINDOWS_PHONE
+            // Allows the game to exit
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            {
+                scene.Dispose();
+
+                this.Exit();
+            }
+#endif
+
             scene.Update(gameTime.ElapsedGameTime, gameTime.IsRunningSlowly, this.IsActive);
         }
 

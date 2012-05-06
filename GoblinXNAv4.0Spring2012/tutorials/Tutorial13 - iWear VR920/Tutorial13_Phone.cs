@@ -30,18 +30,22 @@
  * 
  *************************************************************************************/
 
+// Uncomment this if you want to render only the virtual contents
+//#define VR
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Windows.Media;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Input.Touch;
-using Microsoft.Xna.Framework.Media;
+using Color = Microsoft.Xna.Framework.Color;
+using Matrix = Microsoft.Xna.Framework.Matrix;
 
 using GoblinXNA;
 using GoblinXNA.Graphics;
@@ -49,18 +53,35 @@ using GoblinXNA.SceneGraph;
 using Model = GoblinXNA.Graphics.Model;
 using GoblinXNA.Helpers;
 
-namespace Tutorial13___Stereo_Rendering
+#if !VR
+using GoblinXNA.Device.Capture;
+using GoblinXNA.Device.Vision;
+using GoblinXNA.Device.Vision.Marker;
+#endif
+
+namespace Tutorial13___Stereo_Rendering___PhoneLib
 {
     /// <summary>
-    /// This tutorial demonstrates how to render stereo on the phone.
+    /// This tutorial demonstrates how to render stereo on the phone both in VR and single-camera
+    /// AR. For single-camera AR mode, the video image is cropped to about half-width of the original
+    /// size since only half of the screen is seen to each eye. The cropped image is then shifted from
+    /// its center with different amount for each eye, so that the user can see the real image in stereo
+    /// as if there are two cameras. 
     /// </summary>
-    public class Tutorial13_Phone : Microsoft.Xna.Framework.Game
+    public class Tutorial13_Phone
     {
         // The gap on the center between the left and right screen to prevent the left eye
         // seeing the right eye view and the right eye seeing the left eye view
         const int CENTER_GAP = 16; // in pixels
 
-        GraphicsDeviceManager graphics;
+        // The shift amount in pixels from the center of the cropped video image presented to the left eye. 
+        const int LEFT_IMAGE_SHIFT_FROM_CENTER = 20; // 20 pixels to the right from its center
+
+        // The shift amount in pixels of the right eye image relative to the center of the cropped image
+        // presented to the left eye.
+        const int GAP_BETWEEN_LEFT_AND_RIGHT_IMAGE = -40; // 40 pixels to the left
+
+        bool betterFPS = false; // has trade-off of worse tracking if set to true
 
         Scene scene;
 
@@ -70,46 +91,61 @@ namespace Tutorial13___Stereo_Rendering
         Rectangle rightRect;
 
         TransformNode modelTransformNode;
+#if VR
         float angle = 0;
+#else
+        MarkerNode groundMarkerNode;
+        Viewport viewport;
+
+        Rectangle leftSource;
+        Rectangle rightSource;
+#endif
 
         public Tutorial13_Phone()
         {
-            graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-
-            // Extend battery life under lock.
-            InactiveSleepTime = TimeSpan.FromSeconds(1);
-
-            graphics.IsFullScreen = true;
+            // no contents
         }
 
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
-        protected override void Initialize()
+#if !VR
+        public Texture2D VideoBackground
         {
-            base.Initialize();
+            get { return scene.BackgroundTexture; }
+            set { scene.BackgroundTexture = value; }
+        }
+#endif
 
+        public void Initialize(IGraphicsDeviceService service, ContentManager content, VideoBrush videoBrush)
+        {
+#if !VR
+            // Set the viewport to have the right aspect ratio for rendering the video image
+            viewport = new Viewport(80, 0, 640, 480);
+            viewport.MaxDepth = service.GraphicsDevice.Viewport.MaxDepth;
+            viewport.MinDepth = service.GraphicsDevice.Viewport.MinDepth;
+            service.GraphicsDevice.Viewport = viewport;
+#endif
             // Initialize the GoblinXNA framework
-            State.InitGoblin(graphics, Content, "");
+            State.InitGoblin(service, content, "");
 
             // Initialize the scene graph
             scene = new Scene();
 
             // Set the background color to CornflowerBlue color. 
             // GraphicsDevice.Clear(...) is called by Scene object with this color. 
+#if VR
             scene.BackgroundColor = Color.CornflowerBlue;
-
+#else
+            scene.BackgroundColor = Color.Black;
+#endif
             // Set up the lights used in the scene
             CreateLights();
 
             // Set up the stereo camera, which defines the location and viewing frustum of
             // left and right eyes
             SetupStereoCamera();
-
+#if !VR
+            // Set up optical marker tracking
+            SetupMarkerTracking(videoBrush);
+#endif
             // Set up the viewport for rendering stereo view
             SetupStereoViewport();
 
@@ -127,6 +163,7 @@ namespace Tutorial13___Stereo_Rendering
 
             // Create a light node to hold the light source
             LightNode lightNode = new LightNode();
+            lightNode.AmbientLightColor = new Vector4(0.2f, 0.2f, 0.2f, 1);
             lightNode.LightSource = lightSource;
 
             // Add this light node to the root node
@@ -138,14 +175,14 @@ namespace Tutorial13___Stereo_Rendering
             // Create a stereo camera
             StereoCamera camera = new StereoCamera();
             camera.Translation = new Vector3(0, 0, 0);
-            camera.FieldOfViewY = MathHelper.ToRadians(60);
-            camera.AspectRatio = ((State.Width - CENTER_GAP) / 2) / (float)State.Height;
-            camera.ZNearPlane = 0.1f;
-            camera.ZFarPlane = 1000;
 
             // Set the interpupillary distance which defines the distance between the left
             // and right eyes
+#if VR
             camera.InterpupillaryDistance = 5.5f; // 5.5 cm
+#else
+            camera.InterpupillaryDistance = 20; 
+#endif
             // Set the focal distance to be at infinity
             camera.FocalLength = float.MaxValue;
 
@@ -157,23 +194,85 @@ namespace Tutorial13___Stereo_Rendering
 
         private void SetupStereoViewport()
         {
+#if VR
             // Since we're doing split-screen stereo rendering, the width for each eye's rendered view
             // will be half of the entire screen
             int stereoWidth = (State.Width - CENTER_GAP) / 2;
             int stereoHeight = State.Height;
 
-            PresentationParameters pp = GraphicsDevice.PresentationParameters;
+            PresentationParameters pp = State.Device.PresentationParameters;
 
-            stereoScreenLeft = new RenderTarget2D(GraphicsDevice, stereoWidth, stereoHeight, false,
+            stereoScreenLeft = new RenderTarget2D(State.Device, stereoWidth, stereoHeight, false,
                 SurfaceFormat.Color, pp.DepthStencilFormat);
-            stereoScreenRight = new RenderTarget2D(GraphicsDevice, stereoWidth, stereoHeight, false,
+            stereoScreenRight = new RenderTarget2D(State.Device, stereoWidth, stereoHeight, false,
                 SurfaceFormat.Color, pp.DepthStencilFormat);
 
             leftRect = new Rectangle(0, 0, stereoWidth, stereoHeight);
             rightRect = new Rectangle(stereoWidth + CENTER_GAP, 0, stereoWidth, stereoHeight);
 
             scene.BackgroundBound = leftRect;
+#else
+            // The phone's width is 800, but since we're rendering the video image with aspect ratio of 4x3 
+            // on the background, so we'll hard-code the width to be 640
+            int stereoWidth = 640; 
+            int stereoHeight = State.Height;
+
+            PresentationParameters pp = State.Device.PresentationParameters;
+
+            stereoScreenLeft = new RenderTarget2D(State.Device, stereoWidth, stereoHeight, false,
+                SurfaceFormat.Color, pp.DepthStencilFormat);
+            stereoScreenRight = new RenderTarget2D(State.Device, stereoWidth, stereoHeight, false,
+                SurfaceFormat.Color, pp.DepthStencilFormat);
+
+            int screenWidth = 800;
+
+            leftRect = new Rectangle(0, 0, (screenWidth - CENTER_GAP) / 2, stereoHeight);
+            rightRect = new Rectangle(leftRect.Width + CENTER_GAP, 0, leftRect.Width, stereoHeight);
+
+            int sourceWidth = (screenWidth - CENTER_GAP) / 2;
+
+            // We will render half (a little less than half to be exact due to CENTER_GAP) of the 
+            // entire video image for both the left and right eyes, so we need to set the crop
+            // area
+            leftSource = new Rectangle((screenWidth - sourceWidth) / 2 + LEFT_IMAGE_SHIFT_FROM_CENTER, 0, sourceWidth, State.Height);
+            rightSource = new Rectangle(leftSource.X + GAP_BETWEEN_LEFT_AND_RIGHT_IMAGE, 0, sourceWidth, State.Height);
+#endif
         }
+
+#if !VR
+        private void SetupMarkerTracking(VideoBrush videoBrush)
+        {
+            PhoneCameraCapture captureDevice = new PhoneCameraCapture(videoBrush);
+            captureDevice.InitVideoCapture(0, FrameRate._30Hz, Resolution._640x480,
+                ImageFormat.B8G8R8A8_32, false);
+            ((PhoneCameraCapture)captureDevice).UseLuminance = true;
+
+            if (betterFPS)
+                captureDevice.MarkerTrackingImageResizer = new HalfResizer();
+
+            scene.AddVideoCaptureDevice(captureDevice);
+
+            // Use NyARToolkit ID marker tracker
+            NyARToolkitIdTracker tracker = new NyARToolkitIdTracker();
+
+            if (captureDevice.MarkerTrackingImageResizer != null)
+                tracker.InitTracker((int)(captureDevice.Width * captureDevice.MarkerTrackingImageResizer.ScalingFactor),
+                    (int)(captureDevice.Height * captureDevice.MarkerTrackingImageResizer.ScalingFactor),
+                    "camera_para.dat");
+            else
+                tracker.InitTracker(captureDevice.Width, captureDevice.Height, "camera_para.dat");
+
+            // Set the marker tracker to use for our scene
+            scene.MarkerTracker = tracker;
+
+            ((StereoCamera)scene.CameraNode.Camera).RightProjection = tracker.CameraProjection;
+
+            // Create a marker node to track a ground marker array.
+            groundMarkerNode = new MarkerNode(scene.MarkerTracker, "NyARIdGroundArray.xml", 
+                NyARToolkitTracker.ComputationMethod.Average);
+            scene.RootNode.AddChild(groundMarkerNode);
+        }
+#endif
 
         private void CreateObject()
         {
@@ -184,16 +283,16 @@ namespace Tutorial13___Stereo_Rendering
             shipNode.Model = (Model)loader.Load("", "p1_wedge");
             ((Model)shipNode.Model).UseInternalMaterials = true;
 
-            // Create a transform node to define the transformation of this model
-            // (Transformation includes translation, rotation, and scaling)
-            modelTransformNode = new TransformNode();
-
             // Compute the right scale to apply to the model so that the max dimension
             // of the model will be 50.0 cm (cm is used here since we used cm measure
             // for setting our interpupillary distance)
             Vector3 dim = Vector3Helper.GetDimensions(shipNode.Model.MinimumBoundingBox);
             float scale = 50.0f / Math.Max(Math.Max(dim.X, dim.Y), dim.Z);
 
+            // Create a transform node to define the transformation of this model
+            // (Transformation includes translation, rotation, and scaling)
+            modelTransformNode = new TransformNode();
+#if VR
             modelTransformNode.Scale = new Vector3(scale, scale, scale);
             // Place the model 60 cm away from the viewer
             modelTransformNode.Translation = new Vector3(0, 0, -60);
@@ -201,50 +300,46 @@ namespace Tutorial13___Stereo_Rendering
                 MathHelper.ToRadians(90));
 
             scene.RootNode.AddChild(modelTransformNode);
+#else
+            float largeScale = scale * 4;
+            modelTransformNode.Scale = new Vector3(largeScale, largeScale, largeScale);
+            modelTransformNode.Translation = new Vector3(0, 0, dim.Y * largeScale / 2);
+            modelTransformNode.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
+                Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90));
+            groundMarkerNode.AddChild(modelTransformNode);
+#endif
             modelTransformNode.AddChild(shipNode);
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// all content.
-        /// </summary>
-        protected override void UnloadContent()
+        public void Dispose()
         {
-            Content.Unload();
+            scene.Dispose();
         }
 
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Update(GameTime gameTime)
+        public void Update(TimeSpan elapsedTime, bool isActive)
         {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-            {
-                scene.Dispose();
-
-                this.Exit();
-            }
-
+#if VR
             // Keep rotating the model little by little
             angle += MathHelper.ToRadians(0.5f);
             modelTransformNode.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitY, angle);
+#endif
 
-            scene.Update(gameTime.ElapsedGameTime, gameTime.IsRunningSlowly, this.IsActive);
+            scene.Update(elapsedTime, false, isActive);
         }
 
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Draw(GameTime gameTime)
+        public void Draw(TimeSpan elapsedTime)
         {
+#if !VR
+            State.Device.Viewport = viewport;
+#endif
             // Set the render target to be the left screen render target
             scene.SceneRenderTarget = stereoScreenLeft;
             // Render the scene viewed from the left eye to the left screen render target
-            scene.Draw(gameTime.ElapsedGameTime, gameTime.IsRunningSlowly);
+            scene.Draw(elapsedTime, false);
 
             // Set the render target to be the right screen render target
             scene.SceneRenderTarget = stereoScreenRight;
@@ -253,12 +348,17 @@ namespace Tutorial13___Stereo_Rendering
             scene.RenderScene(false, false);
 
             // Set the render target to be the default one (frame buffer)
-            GraphicsDevice.SetRenderTarget(null);
-            GraphicsDevice.Clear(scene.BackgroundColor);
+            State.Device.SetRenderTarget(null);
+            State.Device.Clear(scene.BackgroundColor);
             // Render the left and right render targets as textures
             State.SharedSpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Opaque);
+#if VR
             State.SharedSpriteBatch.Draw(stereoScreenLeft, leftRect, Color.White);
             State.SharedSpriteBatch.Draw(stereoScreenRight, rightRect, Color.White);
+#else
+            State.SharedSpriteBatch.Draw(stereoScreenLeft, leftRect, leftSource, Color.White);
+            State.SharedSpriteBatch.Draw(stereoScreenRight, rightRect, rightSource, Color.White);
+#endif
             State.SharedSpriteBatch.End();
         }
     }

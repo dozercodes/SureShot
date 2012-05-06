@@ -30,6 +30,9 @@
  * 
  *************************************************************************************/
 
+// Uncomment this line if you want to use the pattern-based marker tracking
+//#define USE_PATTERN_MARKER
+
 using System;
 using System.Collections.Generic;
 using System.Windows.Media;
@@ -65,11 +68,15 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
         MarkerNode groundMarkerNode;
         bool useStaticImage = false;
         bool useSingleMarker = false;
-        bool betterFPS = false; // has trade-off of worse tracking if set to true
+        bool betterFPS = true; // has trade-off of worse tracking if set to true
 
         Viewport viewport;
 
+#if USE_PATTERN_MARKER
         float markerSize = 32.4f;
+#else
+        float markerSize = 40;
+#endif
 
         public Tutorial8_Phone()
         {
@@ -146,6 +153,7 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
 
             // Create a light node to hold the light source
             LightNode lightNode = new LightNode();
+            lightNode.AmbientLightColor = new Vector4(0.2f, 0.2f, 0.2f, 1);
             lightNode.LightSource = lightSource;
 
             scene.RootNode.AddChild(lightNode);
@@ -182,7 +190,11 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
             // the marker tracker
             scene.AddVideoCaptureDevice(captureDevice);
 
+#if USE_PATTERN_MARKER
             NyARToolkitTracker tracker = new NyARToolkitTracker();
+#else
+            NyARToolkitIdTracker tracker = new NyARToolkitIdTracker();
+#endif
 
             if (captureDevice.MarkerTrackingImageResizer != null)
                 tracker.InitTracker((int)(captureDevice.Width * captureDevice.MarkerTrackingImageResizer.ScalingFactor),
@@ -198,11 +210,16 @@ namespace Tutorial8___Optical_Marker_Tracking___PhoneLib
         private void CreateObjects()
         {
             // Create a marker node to track a ground marker array.
+#if USE_PATTERN_MARKER
             if(useSingleMarker)
                 groundMarkerNode = new MarkerNode(scene.MarkerTracker, "patt.hiro", 16, 16, markerSize, 0.7f);
             else
                 groundMarkerNode = new MarkerNode(scene.MarkerTracker, "NyARToolkitGroundArray.xml", 
                     NyARToolkitTracker.ComputationMethod.Average);
+#else
+            groundMarkerNode = new MarkerNode(scene.MarkerTracker, "NyARIdGroundArray.xml",
+                NyARToolkitTracker.ComputationMethod.Average);
+#endif
             scene.RootNode.AddChild(groundMarkerNode);
 
             // Create a geometry node with a model of a box that will be overlaid on

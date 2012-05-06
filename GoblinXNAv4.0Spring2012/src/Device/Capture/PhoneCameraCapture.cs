@@ -310,10 +310,6 @@ namespace GoblinXNA.Device.Capture
             camera.Dispose();
         }
 
-        public void Focus()
-        {
-            camera.Focus();
-        }
         #endregion
 
         #region Private Methods

@@ -1,0 +1,25 @@
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\Sample.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial4 - 3D Object Selection - Phone.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial4 - 3D Object Selection - Phone.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\Tutorial4 - 3D Object Selection - Phone.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\Tutorial4 - 3D Object Selection - Phone.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial4 - 3D Object Selection\..\..\bin\Windows Phone\AppManifest.xaml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\WMAppManifest.xml
+..\..\bin\Windows Phone\
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial4 - 3D Object Selection\..\..\bin\Windows Phone\Tutorial4 - 3D Object Selection - Phone.xap
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\Sample.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Tutorial4 - 3D Object Selection - Phone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Tutorial4 - 3D Object Selection - Phone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\Tutorial4 - 3D Object Selection - Phone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\Tutorial4 - 3D Object Selection - Phone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial4 - 3D Object Selection\..\..\bin\Windows Phone\AppManifest.xaml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\WMAppManifest.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial4 - 3D Object Selection\..\..\bin\Windows Phone\Tutorial4 - 3D Object Selection - Phone.xap
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial4 - 3D Object Selection\obj\Windows Phone\Debug\XapCacheFile.xml

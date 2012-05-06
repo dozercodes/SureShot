@@ -1,0 +1,2 @@
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial4 - 3D Object Selection\Content\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial4 - 3D Object Selection\Content\obj\Windows Phone\Debug\ResolveAssemblyReference.cache

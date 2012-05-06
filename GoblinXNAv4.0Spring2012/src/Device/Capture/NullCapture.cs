@@ -1,5 +1,5 @@
 ﻿/************************************************************************************ 
- * Copyright (c) 2008-2011, Columbia University
+ * Copyright (c) 2008-2012, Columbia University
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -232,6 +232,11 @@ namespace GoblinXNA.Device.Capture
                 {
                     cameraWidth = 1024;
                     cameraHeight = 768;
+                }
+                else if (intImage.Length == 160 * 120)
+                {
+                    cameraWidth = 160;
+                    cameraHeight = 120;
                 }
                 else
                     throw new GoblinException("Unsupported image dimension for size: " + intImage.Length);

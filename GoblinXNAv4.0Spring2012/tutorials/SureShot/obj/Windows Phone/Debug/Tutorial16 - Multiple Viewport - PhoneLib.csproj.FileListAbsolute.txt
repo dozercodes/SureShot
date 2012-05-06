@@ -1,47 +1,86 @@
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\NyARToolkitGroundArray.xml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\camera_para.dat
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker0.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker1.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker10.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker11.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker12.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker13.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker14.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker15.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker16.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker17.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker18.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker19.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker2.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker20.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker21.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker22.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker23.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker24.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker25.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker26.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker27.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker28.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker29.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker3.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker30.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker4.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker5.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker6.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker7.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker8.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker9.patt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\ALVARArray.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\DebugFont.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\p1_wedge.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\wedge_p1_diff_v1_0.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial16 - Multiple Viewport - PhoneLib.dll
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial16 - Multiple Viewport - PhoneLib.pdb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\Tutorial16 - Multiple Viewport - PhoneLib.dll
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\Tutorial16 - Multiple Viewport - PhoneLib.pdb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\Tutorial16 - Multiple Viewport - PhoneLib.dll
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\SureShot\obj\Windows Phone\Debug\Tutorial16 - Multiple Viewport - PhoneLib.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\NyARToolkitGroundArray.xml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\camera_para.dat
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker0.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker1.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker10.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker11.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker12.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker13.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker14.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker15.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker16.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker17.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker18.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker19.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker2.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker20.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker21.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker22.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker23.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker24.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker25.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker26.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker27.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker28.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker29.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker3.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker30.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker4.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker5.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker6.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker7.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker8.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\marker9.patt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\ALVARArray.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\DebugFont.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\p1_wedge.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\wedge_p1_diff_v1_0.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial16 - Multiple Viewport - PhoneLib.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial16 - Multiple Viewport - PhoneLib.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\Tutorial16 - Multiple Viewport - PhoneLib.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\Tutorial16 - Multiple Viewport - PhoneLib.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\NyARToolkitGroundArray.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\camera_para.dat
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker0.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker1.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker10.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker11.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker12.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker13.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker14.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker15.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker16.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker17.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker18.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker19.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker2.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker20.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker21.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker22.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker23.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker24.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker25.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker26.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker27.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker28.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker29.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker3.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker30.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker4.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker5.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker6.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker7.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker8.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\marker9.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\ALVARArray.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\DebugFont.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\p1_wedge.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\wedge_p1_diff_v1_0.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Tutorial16 - Multiple Viewport - PhoneLib.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Tutorial16 - Multiple Viewport - PhoneLib.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\Tutorial16 - Multiple Viewport - PhoneLib.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial16 - Multiple Viewport\obj\Windows Phone\Debug\Tutorial16 - Multiple Viewport - PhoneLib.pdb

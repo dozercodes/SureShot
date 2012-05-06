@@ -1,5 +1,5 @@
 ﻿/************************************************************************************ 
- * Copyright (c) 2008-2011, Columbia University
+ * Copyright (c) 2008-2012, Columbia University
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -114,7 +114,7 @@ namespace MarkerLayout
 
         #region Enums
 
-        public enum ConfigType { ALVAR, NyARToolkit }
+        public enum ConfigType { ALVAR, NyARToolkitPattern, NyARToolkitID }
 
         #endregion
 
@@ -455,7 +455,7 @@ namespace MarkerLayout
                         xmlRootNode.AppendChild(markerXml);
                     }
                 }
-                else
+                else if (type == ConfigType.NyARToolkitPattern)
                 {
                     XmlElement xmlRootNode = xmlDoc.CreateElement("multimarker");
                     xmlRootNode.SetAttribute("markers", markerIDs.Count.ToString());
@@ -511,6 +511,51 @@ namespace MarkerLayout
                         float fy = y * ratio;
 
                         markerXml.SetAttribute("upperLeftCorner", fx + "," + fy);
+
+                        xmlRootNode.AppendChild(markerXml);
+                    }
+                } 
+                else if(type == ConfigType.NyARToolkitID)
+                {
+                    XmlElement xmlRootNode = xmlDoc.CreateElement("multimarker");
+                    xmlRootNode.SetAttribute("markers", markerIDs.Count.ToString());
+                    xmlDoc.AppendChild(xmlRootNode);
+
+                    foreach (int markerID in markerIDs)
+                    {
+                        XmlElement markerXml = xmlDoc.CreateElement("marker");
+
+                        MarkerConfig config = configs[markerID];
+
+                        string patternId = "";
+                        float patternSize = markerSize;
+
+                        if (config.AdditionalInfo != null)
+                        {
+                            foreach (KeyValuePair<string, string> pair in config.AdditionalInfo)
+                            {
+                                switch (pair.Key)
+                                {
+                                    case "patternId":
+                                        patternId = pair.Value;
+                                        break;
+                                }
+                            }
+                        }
+
+                        if (String.IsNullOrEmpty(patternId))
+                            throw new Exception("You need to have a patternName information for marker: ");
+
+                        markerXml.SetAttribute("patternId", patternId);
+                        markerXml.SetAttribute("patternSize", patternSize.ToString());
+
+                        int x = config.Position.X - configCenter.X + (config.Size.Width / 2);
+                        int y = config.Position.Y - configCenter.Y + (config.Size.Height / 2);
+
+                        float fx = x * ratio;
+                        float fy = y * ratio;
+
+                        markerXml.SetAttribute("center", fx + "," + fy);
 
                         xmlRootNode.AppendChild(markerXml);
                     }

@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>pTorus1</Name>
     <Identity>
-      <SourceFilename>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\torus.fbx</SourceFilename>
+      <SourceFilename>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\torus.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -26,7 +26,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>lambert1</Name>
       <Identity>
-        <SourceFilename>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\torus.fbx</SourceFilename>
+        <SourceFilename>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\torus.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

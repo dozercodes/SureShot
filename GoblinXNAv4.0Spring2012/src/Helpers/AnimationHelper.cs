@@ -274,7 +274,7 @@ namespace GoblinXNA.Helpers
         /// </summary>
         /// <param name="forward"> Determines whether we will loop from start to end positions, or from end to start positions. True means from start to end positions.</param>
         /// <param name="howManyTimes">Instances to loop over. If left black (or less than zero) it will loop indefinitely. </param>
-        public void SetLooping(bool forward, int howManyTimes)
+        public void SetLooping(bool forward, int howManyTimes = -1)
         {
                 switch (kindOfAnimation)
                 {

@@ -1,5 +1,5 @@
 /************************************************************************************ 
- * Copyright (c) 2008-2011, Columbia University
+ * Copyright (c) 2008-2012, Columbia University
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -205,40 +205,93 @@ namespace GoblinXNA.Helpers
         }
 
         /// <summary>
-        /// Converts a Quaternion to Euler angles (X = Yaw, Y = Pitch, Z = Roll)
+        /// Convert a quaternion (TrackingTools type) to euler angles (Y, Z, X)
+        /// Y = Heading  (Yaw)
+        /// Z = Attitude (Pitch)
+        /// X = Bank     (Roll)
         /// </summary>
         /// <param name="rotation"></param>
         /// <remarks>
-        /// http://www.innovativegames.net/blog/blog/2009/03/18/matrices-quaternions-and-euler-angle-vectors/
+        /// From Martin Baker (http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/index.htm)
+        /// conventions:
+        ///  - input and output units are both in radians
+        ///  - euler angles are about global axes
+        ///  - euler + angle is right-handed
         /// </remarks>
         /// <returns></returns>
         public static Vector3 QuaternionToEulerAngleVector3(Quaternion rotation)
         {
-            Vector3 rotationaxes = new Vector3();
-            Vector3 forward = Vector3.Transform(Vector3.Forward, rotation);
-            Vector3 up = Vector3.Transform(Vector3.Up, rotation);
+            Vector3 result = Vector3.Zero;
 
-            rotationaxes = AngleTo(new Vector3(), forward);
-
-            if (rotationaxes.X == MathHelper.PiOver2)
+            double test = rotation.X * rotation.Y + rotation.Z * rotation.W;
+            if (test > 0.499)                            // singularity at north pole
             {
-                rotationaxes.Y = (float)Math.Atan2((double)up.X, (double)up.Z);
-                rotationaxes.Z = 0;
-            }
-            else if (rotationaxes.X == -MathHelper.PiOver2)
-            {
-                rotationaxes.Y = (float)Math.Atan2((double)-up.X, (double)-up.Z);
-                rotationaxes.Z = 0;
-            }
-            else
-            {
-                up = Vector3.Transform(up, Matrix.CreateRotationY(-rotationaxes.Y));
-                up = Vector3.Transform(up, Matrix.CreateRotationX(-rotationaxes.X));
-
-                rotationaxes.Z = (float)Math.Atan2((double)-up.Z, (double)up.Y);
+                result.Y = (float)(2.0 * System.Math.Atan2(rotation.X, rotation.W));
+                result.Z = MathHelper.PiOver2;
+                result.X = 0.0f;
+                return result;
             }
 
-            return rotationaxes;
+            if (test < -0.499)                           // singularity at south pole
+            {
+                result.Y = (float)(-2.0 * System.Math.Atan2(rotation.X, rotation.W));
+                result.Z = -MathHelper.PiOver2;
+                result.X = 0.0f;
+                return result;
+            }
+
+            double sqx = rotation.X * rotation.X;
+            double sqy = rotation.Y * rotation.Y;
+            double sqz = rotation.Z * rotation.Z;
+            result.Y = (float)Math.Atan2(2.0f * rotation.Y * rotation.W - 2.0 * rotation.X * rotation.Z,
+                1.0 - 2.0 * sqy - 2.0 * sqz);
+            result.Z = (float)Math.Asin(2.0f * test);
+            result.X = (float)Math.Atan2(2.0f * rotation.X * rotation.W - 2.0 * rotation.Y * rotation.Z,
+                1.0f - 2.0 * sqx - 2.0 * sqz);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Convert a quaternion (TrackingTools type) to euler angles (Y, Z, X)
+        /// Y = Heading  (Yaw)
+        /// Z = Attitude (Pitch)
+        /// X = Bank     (Roll)
+        /// </summary>
+        /// <param name="rotation"></param>
+        /// <remarks>
+        /// From Martin Baker (http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/index.htm)
+        /// conventions:
+        ///  - input and output units are both in radians
+        ///  - euler angles are about global axes
+        ///  - euler + angle is right-handed
+        /// </remarks>
+        /// <returns></returns>
+        public static void QuaternionToEuler(double qx, double qy, double qz, double qw, out float y, out float z, out float x)
+        {
+            double test = qx * qy + qz * qw;
+            if (test > 0.499)                            // singularity at north pole
+            {
+                y = (float)(2.0 * Math.Atan2(qx, qw));
+                z = MathHelper.PiOver2;
+                x = 0.0f;
+                return;
+            }
+
+            if (test < -0.499)                           // singularity at south pole
+            {
+                y = (float)(-2.0 * Math.Atan2(qx, qw));
+                z = -MathHelper.PiOver2;
+                x = 0.0f;
+                return;
+            }
+
+            double sqx = qx * qx;
+            double sqy = qy * qy;
+            double sqz = qz * qz;
+            y = (float)Math.Atan2(2.0F * qy * qw - 2.0 * qx * qz, 1.0F - 2.0 * sqy - 2.0 * sqz);
+            z = (float)Math.Asin(2.0F * test);
+            x = (float)Math.Atan2(2.0 * qx * qw - 2.0 * qy * qz, 1.0F - 2.0 * sqx - 2.0 * sqz);
         }
 
         /// <summary>

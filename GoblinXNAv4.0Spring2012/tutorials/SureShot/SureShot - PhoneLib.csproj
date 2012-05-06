@@ -42,8 +42,9 @@
     <XnaCompressContent>false</XnaCompressContent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GoblinXNA, Version=4.0.0.0, Culture=neutral, processorArchitecture=x86" />
-    <Reference Include="MataliPhysics, Version=1.6.2.0, Culture=neutral, PublicKeyToken=5c19458cf3fd6eb7, processorArchitecture=x86" />
+    <Reference Include="GoblinXNA, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MataliPhysics, Version=1.6.2.0, Culture=neutral, PublicKeyToken=5c19458cf3fd6eb7, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Xna.Framework" />
     <Reference Include="Microsoft.Xna.Framework.Game" />
     <Reference Include="Microsoft.Xna.Framework.Graphics" />

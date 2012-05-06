@@ -1,3 +1,4 @@
 Content\Arial-24-Vector.xnb
 Content\DebugFont.xnb
 Content\rubber_ball_01.xnb
+Content\crosshairs.xnb

@@ -1,0 +1,11 @@
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\bin\Debug\raw_markers\ALVAR\MarkerData_0.png
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\bin\Debug\raw_markers\ALVAR\MarkerData_1.png
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\bin\Debug\raw_markers\ALVAR\MarkerData_2.png
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\bin\Debug\raw_markers\ALVAR\MarkerData_3.png
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\bin\Debug\SampleALVARLayout.xml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\bin\Debug\SampleNyARToolkitLayout.xml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\obj\Debug\MarkerLayout.exe
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\obj\Debug\MarkerLayout.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\bin\Debug\MarkerLayout.exe
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tools\MarkerLayout\bin\Debug\MarkerLayout.pdb

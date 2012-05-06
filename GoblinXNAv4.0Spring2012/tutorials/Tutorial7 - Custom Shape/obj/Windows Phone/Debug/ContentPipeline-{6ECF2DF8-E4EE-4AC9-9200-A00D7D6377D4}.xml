@@ -2,21 +2,21 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Fonts\Sample.spritefont</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Fonts\Sample.spritefont</Source>
       <Name>Sample</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\Sample.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\Sample.xnb</Output>
       <Time>2011-10-10T10:41:14-04:00</Time>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Textures\brick_wall_14.jpg</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Textures\brick_wall_14.jpg</Source>
       <Name>brick_wall_14</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\brick_wall_14.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\brick_wall_14.xnb</Output>
       <Time>2011-11-22T12:30:02-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -26,10 +26,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial7 - Custom Shape\Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial7 - Custom Shape\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial7 - Custom Shape\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial7 - Custom Shape\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial7 - Custom Shape\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial7 - Custom Shape\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

@@ -2,24 +2,24 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\dude.fbx</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\dude.fbx</Source>
       <Name>dude</Name>
       <Importer>FbxImporter</Importer>
       <Processor>SkinnedModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\dude.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\dude.xnb</Output>
       <Time>2011-10-10T10:41:10-04:00</Time>
       <Dependency>
-        <Key>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\dude_0.xml</Key>
-        <Value>2012-05-02T21:15:54.4339283-04:00</Value>
+        <Key>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\dude_0.xml</Key>
+        <Value>2012-05-03T23:14:26.5414496-04:00</Value>
       </Dependency>
-      <Request>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\head_0.xnb</Request>
-      <Request>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\jacket_0.xnb</Request>
-      <Request>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\pants_0.xnb</Request>
-      <Request>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\upBodyC_0.xnb</Request>
+      <Request>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\head_0.xnb</Request>
+      <Request>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\jacket_0.xnb</Request>
+      <Request>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\pants_0.xnb</Request>
+      <Request>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\upBodyC_0.xnb</Request>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Textures\checkerboard.jpg</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Textures\checkerboard.jpg</Source>
       <Name>checkerboard</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -28,18 +28,18 @@
         <Data Key="GenerateMipmaps">True</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\checkerboard.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\checkerboard.xnb</Output>
       <Time>2011-10-10T10:41:14-04:00</Time>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\dude.fbx</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\dude.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\dude_0.xml</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\dude_0.xml</Output>
       <Time>2011-10-10T10:41:10-04:00</Time>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\head.tga</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\head.tga</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -51,11 +51,11 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\head_0.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\head_0.xnb</Output>
       <Time>2011-10-10T10:41:10-04:00</Time>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\jacket.tga</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\jacket.tga</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -67,11 +67,11 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\jacket_0.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\jacket_0.xnb</Output>
       <Time>2011-10-10T10:41:10-04:00</Time>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\pants.tga</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\pants.tga</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -83,11 +83,11 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\pants_0.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\pants_0.xnb</Output>
       <Time>2011-10-10T10:41:10-04:00</Time>
     </Item>
     <Item>
-      <Source>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\upBodyC.tga</Source>
+      <Source>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\upBodyC.tga</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -99,7 +99,7 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\upBodyC_0.xnb</Output>
+      <Output>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\upBodyC_0.xnb</Output>
       <Time>2011-10-10T10:41:10-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -109,15 +109,15 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\SkinnedModelPipeline - Phone.dll</Key>
-        <Value>2012-05-02T21:15:33.3387217-04:00</Value>
+        <Key>C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\SkinnedModelPipeline - Phone.dll</Key>
+        <Value>2012-05-03T23:14:15.1067956-04:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

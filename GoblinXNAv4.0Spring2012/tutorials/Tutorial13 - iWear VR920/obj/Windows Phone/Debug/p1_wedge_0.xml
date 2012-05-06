@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>p1_wedge_geo1</Name>
     <Identity>
-      <SourceFilename>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\p1_wedge.fbx</SourceFilename>
+      <SourceFilename>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\p1_wedge.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -48,7 +48,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>wedge_phong</Name>
       <Identity>
-        <SourceFilename>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\p1_wedge.fbx</SourceFilename>
+        <SourceFilename>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\p1_wedge.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -70,7 +70,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>p1_cockpit_phong1</Name>
       <Identity>
-        <SourceFilename>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\p1_wedge.fbx</SourceFilename>
+        <SourceFilename>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\p1_wedge.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -84,7 +84,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>engines</Name>
       <Identity>
-        <SourceFilename>C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\data\Models\p1_wedge.fbx</SourceFilename>
+        <SourceFilename>C:\Users\RAID\Downloads\GoblinXNAc4.0\data\Models\p1_wedge.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

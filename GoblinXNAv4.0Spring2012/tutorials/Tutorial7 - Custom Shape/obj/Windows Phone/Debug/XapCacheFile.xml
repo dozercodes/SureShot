@@ -1,13 +1,15 @@
-﻿<xapCache source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial7 - Custom Shape\..\..\bin\Windows Phone\Tutorial7 - Custom Shape - Phone.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="5/2/2012 9:16:00 PM">
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial7 - Custom Shape\Background.png" archivePath="Background.png" lastWriteTime="10/10/2011 10:40:36 AM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial7 - Custom Shape\PhoneGameThumb.png" archivePath="PhoneGameThumb.png" lastWriteTime="10/10/2011 10:40:36 AM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="5/2/2012 9:16:00 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial7 - Custom Shape\..\..\bin\Windows Phone\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="5/2/2012 9:16:00 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial7 - Custom Shape - Phone.dll" archivePath="Tutorial7 - Custom Shape - Phone.dll" lastWriteTime="5/2/2012 9:16:00 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\GoblinXNA.dll" archivePath="GoblinXNA.dll" lastWriteTime="4/30/2012 5:20:32 AM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\NyARToolkitCS.dll" archivePath="NyARToolkitCS.dll" lastWriteTime="10/10/2011 10:42:36 AM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\MataliPhysics.dll" archivePath="MataliPhysics.dll" lastWriteTime="10/19/2011 9:00:00 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Nuclex.Fonts.dll" archivePath="Nuclex.Fonts.dll" lastWriteTime="3/4/2011 8:00:36 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\Sample.xnb" archivePath="Content\Sample.xnb" lastWriteTime="5/2/2012 7:38:05 PM" />
-  <file source="C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\brick_wall_14.xnb" archivePath="Content\brick_wall_14.xnb" lastWriteTime="4/26/2012 10:54:57 AM" />
+﻿<xapCache source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial7 - Custom Shape\..\..\bin\Windows Phone\Tutorial7 - Custom Shape - Phone.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="5/4/2012 5:22:18 AM">
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial7 - Custom Shape\Background.png" archivePath="Background.png" lastWriteTime="10/10/2011 10:40:36 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial7 - Custom Shape\PhoneGameThumb.png" archivePath="PhoneGameThumb.png" lastWriteTime="10/10/2011 10:40:36 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="5/4/2012 5:22:18 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial7 - Custom Shape\..\..\bin\Windows Phone\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="5/4/2012 5:22:18 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Tutorial7 - Custom Shape - Phone.dll" archivePath="Tutorial7 - Custom Shape - Phone.dll" lastWriteTime="4/24/2012 12:39:40 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\GoblinXNA.dll" archivePath="GoblinXNA.dll" lastWriteTime="4/24/2012 12:38:32 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\NyARToolkit4.dll" archivePath="NyARToolkit4.dll" lastWriteTime="4/17/2012 5:39:20 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\NyARToolkitCS.dll" archivePath="NyARToolkitCS.dll" lastWriteTime="10/10/2011 10:42:36 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\MataliPhysics.dll" archivePath="MataliPhysics.dll" lastWriteTime="10/19/2011 9:00:00 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\NyARToolkit4.markersystem.dll" archivePath="NyARToolkit4.markersystem.dll" lastWriteTime="4/17/2012 5:41:18 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Nuclex.Fonts.dll" archivePath="Nuclex.Fonts.dll" lastWriteTime="3/4/2011 8:00:36 PM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\Sample.xnb" archivePath="Content\Sample.xnb" lastWriteTime="5/4/2012 1:26:23 AM" />
+  <file source="C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\brick_wall_14.xnb" archivePath="Content\brick_wall_14.xnb" lastWriteTime="5/3/2012 11:14:40 PM" />
 </xapCache>

@@ -1,0 +1,34 @@
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Content\p1_wedge.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Content\wedge_p1_diff_v1_0.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\NyARIdGroundArray.xml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\camera_para.dat
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\ApplicationIcon.png
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Background.png
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Tutorial13 - Stereo Rendering - Phone.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Tutorial13 - Stereo Rendering - Phone.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\AppManifest.xaml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\bin\Windows Phone\Tutorial13___Stereo_Rendering___Phone.xap
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\App.g.i.cs
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\GamePage.g.i.cs
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\Tutorial13 - Stereo Rendering - Phone.g.resources
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\Tutorial13 - Stereo Rendering - Phone.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\Tutorial13 - Stereo Rendering - Phone.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\XapCacheFile.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\NyARIdGroundArray.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\camera_para.dat
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\ApplicationIcon.png
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Background.png
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\p1_wedge.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\wedge_p1_diff_v1_0.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Tutorial13 - Stereo Rendering - Phone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Tutorial13 - Stereo Rendering - Phone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\AppManifest.xaml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Tutorial13___Stereo_Rendering___Phone.xap
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\App.g.i.cs
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\GamePage.g.i.cs
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\Tutorial13 - Stereo Rendering - Phone.g.resources
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\Tutorial13 - Stereo Rendering - Phone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\Tutorial13 - Stereo Rendering - Phone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\Silverlight\obj\Debug\XapCacheFile.xml

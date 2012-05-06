@@ -1,20 +1,27 @@
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\DebugFont.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\Sample.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial1 - Getting Started - Phone.dll
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial1 - Getting Started - Phone.pdb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\Tutorial1 - Getting Started - Phone.dll
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\Tutorial1 - Getting Started - Phone.pdb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\AppManifest.xaml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\WMAppManifest.xml.g
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\WMAppManifest.xml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\DebugFont.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\Sample.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial1 - Getting Started - Phone.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial1 - Getting Started - Phone.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\Tutorial1 - Getting Started - Phone.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\Tutorial1 - Getting Started - Phone.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\AppManifest.xaml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\WMAppManifest.xml
 ..\..\bin\Windows Phone\
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\Tutorial1 - Getting Started - Phone.xap
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\XapCacheFile.xml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\Tutorial1 - Getting Started - Phone.xap
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\XapCacheFile.xml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\AppManifest.xaml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\WMAppManifest.xml.g
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\WMAppManifest.xml
-..\..\bin\Windows Phone\
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\Tutorial1 - Getting Started - Phone.xap
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\DebugFont.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\Sample.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Tutorial1 - Getting Started - Phone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Tutorial1 - Getting Started - Phone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\Tutorial1 - Getting Started - Phone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\Tutorial1 - Getting Started - Phone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\AppManifest.xaml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\WMAppManifest.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial1 - Getting Started\..\..\bin\Windows Phone\Tutorial1 - Getting Started - Phone.xap
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial1 - Getting Started\obj\Windows Phone\Debug\XapCacheFile.xml

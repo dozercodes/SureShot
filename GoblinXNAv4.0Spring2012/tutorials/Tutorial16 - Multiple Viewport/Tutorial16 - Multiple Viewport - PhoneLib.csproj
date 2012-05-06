@@ -45,6 +45,7 @@
     <Reference Include="GoblinXNA">
       <HintPath>..\..\bin\Windows Phone\GoblinXNA.dll</HintPath>
     </Reference>
+    <Reference Include="MataliPhysics, Version=1.6.2.0, Culture=neutral, PublicKeyToken=5c19458cf3fd6eb7, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Xna.Framework" />
     <Reference Include="Microsoft.Xna.Framework.Game" />
     <Reference Include="Microsoft.Xna.Framework.Graphics" />

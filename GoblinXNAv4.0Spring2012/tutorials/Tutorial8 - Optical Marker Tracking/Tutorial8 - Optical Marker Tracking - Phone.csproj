@@ -59,7 +59,6 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tutorial8_Phone.cs" />
   </ItemGroup>
@@ -177,6 +176,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="NyARIdGroundArray.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="NyARToolkitGroundArray.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

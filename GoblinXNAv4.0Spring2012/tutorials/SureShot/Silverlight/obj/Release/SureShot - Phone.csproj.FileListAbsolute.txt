@@ -1,0 +1,66 @@
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\NyARToolkitGroundArray.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\camera_para.dat
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker0.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker1.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker10.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker11.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker12.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker13.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker14.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker15.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker16.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker17.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker18.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker19.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker2.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker20.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker21.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker22.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker23.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker24.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker25.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker26.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker27.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker28.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker29.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker3.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker30.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker4.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker5.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker6.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker7.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker8.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\marker9.patt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\ApplicationIcon.png
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Background.png
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\ALVARArray.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\crosshairs.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\grid.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\help.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\helppage.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\play.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\sureshot2.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\back.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\win.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\DebugFont.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\Sample.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\p1_wedge.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\BallBlue.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\BallRed.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\BallWhite.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\barrier.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\ground.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\barrierblk.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\wedge_p1_diff_v1_0.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Content\grid_0.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Tutorial16 - Multiple Viewport - Phone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Tutorial16 - Multiple Viewport - Phone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\AppManifest.xaml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\bin\Windows Phone\Tutorial16___Multiple_Viewport___Phone.xap
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SureShot\Silverlight\obj\Release\ResolveAssemblyReference.cache
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SureShot\Silverlight\obj\Release\App.g.i.cs
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SureShot\Silverlight\obj\Release\GamePage.g.i.cs
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SureShot\Silverlight\obj\Release\Tutorial16 - Multiple Viewport - Phone.g.resources
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SureShot\Silverlight\obj\Release\Tutorial16 - Multiple Viewport - Phone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SureShot\Silverlight\obj\Release\Tutorial16 - Multiple Viewport - Phone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\SureShot\Silverlight\obj\Release\XapCacheFile.xml

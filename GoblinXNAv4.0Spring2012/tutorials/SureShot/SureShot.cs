@@ -36,19 +36,23 @@ using System.Linq;
 using System.Text;
 using System.Windows.Media;
 using System.Diagnostics;
+using System.Windows.Navigation;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
 using Color = Microsoft.Xna.Framework.Color;
 using Matrix = Microsoft.Xna.Framework.Matrix;
+using Microsoft.Phone.Controls;
+//using Microsoft.Devices;
 
 using GoblinXNA;
 using GoblinXNA.Graphics;
 using GoblinXNA.SceneGraph;
 using Model = GoblinXNA.Graphics.Model;
+using Camera = GoblinXNA.SceneGraph.Camera;
 using GoblinXNA.Graphics.Geometry;
 using GoblinXNA.Device.Generic;
 using GoblinXNA.Device.Capture;
@@ -60,6 +64,7 @@ using GoblinXNA.Physics.Matali;
 using Komires.MataliPhysics;
 using MataliPhysicsObject = Komires.MataliPhysics.PhysicsObject;
 
+using Microsoft.Devices;
 using GoblinXNA.Helpers;
 using GoblinXNA.UI;
 using GoblinXNA.UI.UI2D;
@@ -96,15 +101,26 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
         Rectangle arViewRect;
         Rectangle vrViewRect;
 
+        SpriteBatch spriteBatch;
+        Texture2D logo, helpbutton, playbutton, backbutton, helpscreen, winscreen;
+        G2DButton helpb, playb, backb;
+        Vector2 title, play, help;
+        String label = "...";
+        SpriteFont uiFont;
+        bool playGame = false;
+        bool viewHelp = false;
+        bool goBack = false;
+        bool gameOver = false;
+
         Texture2D videoTexture;
         int maxTargets = 3;
-        int maxBarriers = 10;
+        int maxBarriers = 7;
 
         float markerSize = 32.4f;
 
         public SureShot()
         {
-            //no content
+            TouchPanel.EnabledGestures = GestureType.Flick | GestureType.Pinch;
         }
 
         public Texture2D VideoBackground
@@ -122,19 +138,29 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             service.GraphicsDevice.Viewport = viewport;
 
             textFont = content.Load<SpriteFont>("Sample");
+            spriteBatch = new SpriteBatch(service.GraphicsDevice);
+            logo = content.Load<Texture2D>("sureshot2");
+            helpbutton = content.Load<Texture2D>("help");
+            playbutton = content.Load<Texture2D>("play");
+            helpscreen = content.Load<Texture2D>("helppage");
+            backbutton = content.Load<Texture2D>("back");
+            winscreen = content.Load<Texture2D>("win");
 
             // Initialize the GoblinXNA framework
             State.InitGoblin(service, content, "");
 
             graphics = service;
 
+            State.ThreadOption = (ushort)ThreadOptions.MarkerTracking;
+
             // Initialize the scene graph
             scene = new Scene();
+            scene.BackgroundColor = Color.Black;
 
-            // We will use the Matali physics engine ()
-            // for processing the intersection of cast rays with
-            // 3D objects to detect object selection. 
             scene.PhysicsEngine = new MataliPhysics();
+            scene.PhysicsEngine.Gravity = 400;
+            scene.PhysicsEngine.GravityDirection = -Vector3.UnitY;
+            ((MataliPhysics)scene.PhysicsEngine).SimulationTimeStep = 1 / 20f;
 
             // Set up the lights used in the scene
             CreateLights();
@@ -162,32 +188,37 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
 
             State.ShowFPS = true;
 
-            MouseInput.Instance.MousePressEvent += new HandleMousePress(MouseClickHandler);
+            //MouseInput.Instance.MousePressEvent += new HandleMousePress(MouseClickHandler);
+            CameraButtons.ShutterKeyReleased += ButtonPressHandler;
         }
 
-        private void MouseClickHandler(int button, Point mouseLocation)
+        private void ButtonPressHandler(object sender, EventArgs e)
         {
-            // Shoot a box if left mouse button is clicked
-            if (button == MouseInput.LeftButton)
+            //first deselect all barriers
+            //deselectBarriers();
+
+            // shoot a beam from the center of the screen
+            // 0 means on the near clipping plane, and 1 means on the far clipping plane
+            Vector3 nearSource = new Vector3((viewport.Width / 2) + 80, (viewport.Height / 2), 0);//new Vector3(viewport.Width / 2 + 80, viewport.Height / 2, 0);
+            Vector3 farSource = new Vector3((viewport.Width / 2) + 80, (viewport.Height / 2), 1);//(viewport.Width / 2 + 80, viewport.Height / 2, 1);
+
+            //tranform center of the screen to the coordinates of the ground array
+            Vector3 nearPoint = graphics.GraphicsDevice.Viewport.Unproject(nearSource,
+                State.ProjectionMatrix, groundMarkerNode.WorldTransformation, Matrix.Identity);
+            Vector3 farPoint = graphics.GraphicsDevice.Viewport.Unproject(farSource,
+                State.ProjectionMatrix, groundMarkerNode.WorldTransformation, Matrix.Identity);
+            
+            List<PickedObject> pickedObjects = ((MataliPhysics)scene.PhysicsEngine).PickRayCast(
+                nearPoint, farPoint);
+            if (pickedObjects.Count > 0)
             {
-                // 0 means on the near clipping plane, and 1 means on the far clipping plane
-                Vector3 nearSource = new Vector3(mouseLocation.X, mouseLocation.Y, 0);
-                Vector3 farSource = new Vector3(mouseLocation.X, mouseLocation.Y, 1);
-
-                Vector3 nearPoint = graphics.GraphicsDevice.Viewport.Unproject(nearSource,
-                    State.ProjectionMatrix, State.ViewMatrix, Matrix.Identity);
-                Vector3 farPoint = graphics.GraphicsDevice.Viewport.Unproject(farSource,
-                    State.ProjectionMatrix, State.ViewMatrix, Matrix.Identity);
-
-                List<PickedObject> pickedObjects = ((MataliPhysics)scene.PhysicsEngine).PickRayCast(
-                    nearPoint, farPoint);
-                //if (pickedObjects.Count > 0)
-                //{
-                //    // get closes object
-                //    pickedObjects.Sort();
-                //    pickedNode = ((GeometryNode)pickedObjects[0].PickedPhysicsObject.Container);
-                //    groundMarkerNode.RemoveChild(pickedNode);
-                //}
+                // get closest object
+                pickedObjects.Sort();
+                pickedNode = ((GeometryNode)pickedObjects[0].PickedPhysicsObject.Container);
+                if (pickedNode.Name.Contains("Target"))
+                {
+                    ((TransformNode)(pickedNode.Parent)).RemoveChild(pickedNode);
+                }
             }
         }
 
@@ -195,8 +226,8 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
         {
             // Create a camera for VR scene 
             Camera vrCamera = new Camera();
-            vrCamera.Translation = new Vector3(0, -280, 480);
-            vrCamera.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(45));
+            vrCamera.Translation = new Vector3(0, 350, 125);
+            vrCamera.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(-90));
             vrCamera.FieldOfViewY = MathHelper.ToRadians(60);
             vrCamera.ZNearPlane = 1;
             vrCamera.ZFarPlane = 2000;
@@ -367,11 +398,12 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
 
             //set up targets
             string[] ballColors = new string[]{"White", "Red", "Blue"};
-            for (int i = 0; i < maxTargets; i++)
+            for (int i = 0; i < 1; i++)
             {
                 GeometryNode target = new GeometryNode("Target" + i);
                 target.Model = (Model)loader.Load("", "Ball" + ballColors[i % ballColors.Length]);
                 ((Model)target.Model).UseInternalMaterials = true;
+                target.Physics = new MataliObject(target);
                 target.Physics.Shape = GoblinXNA.Physics.ShapeType.Sphere;
                 target.Physics.Pickable = true;
                 target.AddToPhysicsEngine = true;
@@ -379,7 +411,7 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
                 // Get the dimension of the model
                 Vector3 dimension = Vector3Helper.GetDimensions(target.Model.MinimumBoundingBox);
                 // Scale the model to fit to the size of 5 markers
-                float scale = markerSize / Math.Max(dimension.X, dimension.Z);
+                float scale = markerSize / Math.Max(dimension.X, dimension.Z) * 2;
 
                 Random rand = new Random();
                 Vector3 min = groundNode.Model.MinimumBoundingBox.Min;
@@ -387,7 +419,8 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
 
                 TransformNode tarTransNode = new TransformNode("Trans" + i)
                 {
-                    Translation = new Vector3((((float)rand.NextDouble() * (max.X - min.X)) + min.X), (((float)rand.NextDouble() * (max.Y - min.Y)) + min.Y), dimension.Y * scale / 2),
+                    //Translation = new Vector3((((float)rand.NextDouble() * (max.X - min.X)) + min.X), (((float)rand.NextDouble() * (max.Y - min.Y)) + min.Y), dimension.Y * scale / 2),
+                    Translation = new Vector3(0, 0, dimension.Y * scale / 2),//new Vector3(viewport.Width/2 + 80, viewport.Height/2, dimension.Y * scale / 2),
                     Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
                         Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
                     Scale = new Vector3(scale, scale, scale)
@@ -398,12 +431,13 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
             }
             
             //set up barriers
-            for (int i = 0; i < maxBarriers; i++)
+            for (int i = 0; i < 1; i++)
             {
                 GeometryNode barrier = new GeometryNode("Barrier" + i);
                 barrier.Model = (Model)loader.Load("", "barrier");
                 ((Model)barrier.Model).UseInternalMaterials = true;
-                barrier.Physics.Shape = GoblinXNA.Physics.ShapeType.Sphere;
+                barrier.Physics = new MataliObject(barrier);
+                barrier.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;
                 barrier.Physics.Pickable = true;
                 barrier.AddToPhysicsEngine = true;
 
@@ -415,7 +449,7 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
                 Random rand = new Random();
                 Vector3 min = groundNode.Model.MinimumBoundingBox.Min;
                 Vector3 max = groundNode.Model.MinimumBoundingBox.Max;
-                float maxZ = 300;
+                float maxZ = 200;
 
                 TransformNode barrTransNode = new TransformNode("Trans" + (i+maxTargets))
                 {
@@ -429,46 +463,32 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
                 barrTransNode.AddChild(barrier);
             }
 
-            //set up ground plane
-            GeometryNode plane = new GeometryNode("Plane");
-            plane.Model = (Model)loader.Load("", "ground");
-            ((Model)plane.Model).UseInternalMaterials = true;
+            //buttons
+            playb = new G2DButton();
+            playb.Name = "play";
+            playb.Bounds = new Rectangle(75, 400, 100, 40);
+            playb.ActionPerformedEvent += new ActionPerformed(HandleActionPerformed);
+            playb.Texture = playbutton;
 
-            // Get the dimension of the model
-            Vector3 planeDimension = Vector3Helper.GetDimensions(plane.Model.MinimumBoundingBox);
-            // Scale the model to fit to the size of 5 markers
-            float planeScale = Math.Max(planeDimension.X, planeDimension.Z)/4;
 
-            TransformNode planeTransNode = new TransformNode("TransPlane")
-            {
-                Translation = new Vector3(0, groundNode.Model.MinimumBoundingBox.Min.Y-50, planeDimension.Z*planeScale/4),
-                Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(5)),
-                Scale = new Vector3(planeScale, planeScale, planeScale)
-            };
+            helpb = new G2DButton();
+            helpb.Name = "help";
+            helpb.Bounds = new Rectangle(75, 450, 100, 40);
+            helpb.ActionPerformedEvent += new ActionPerformed(HandleActionPerformed);
+            helpb.Texture = helpbutton;
 
-            scene.RootNode.AddChild(planeTransNode);
-            planeTransNode.AddChild(plane);
+            backb = new G2DButton();
+            backb.Name = "back";
+            backb.Bounds = new Rectangle(75, 400, 100, 40);
+            backb.ActionPerformedEvent += new ActionPerformed(HandleActionPerformed);
+            backb.Texture = backbutton;
+            backb.Visible = false;
+            backb.Enabled = false;
 
-            //set up ground plane
-            GeometryNode background = new GeometryNode("Background");
-            background.Model = (Model)loader.Load("", "ground");
-            ((Model)background.Model).UseInternalMaterials = true;
 
-            // Get the dimension of the model
-            Vector3 backgroundDimension = Vector3Helper.GetDimensions(background.Model.MinimumBoundingBox);
-            // Scale the model to fit to the size of 5 markers
-            float backgroundScale = Math.Max(backgroundDimension.X, backgroundDimension.Z) / 10;
-
-            TransformNode backgroundTransNode = new TransformNode("TransBackground")
-            {
-                Translation = new Vector3(0, 0, 0),
-                Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathHelper.ToRadians(90)) *
-                        Quaternion.CreateFromAxisAngle(Vector3.UnitY, MathHelper.ToRadians(90)),
-                Scale = new Vector3(backgroundScale, backgroundScale, backgroundScale)
-            };
-
-            scene.RootNode.AddChild(backgroundTransNode);
-            backgroundTransNode.AddChild(background);
+            scene.UIRenderer.Add2DComponent(playb);
+            scene.UIRenderer.Add2DComponent(helpb);
+            scene.UIRenderer.Add2DComponent(backb);
         }
 
         public void Dispose()
@@ -478,99 +498,236 @@ namespace Tutorial16___Multiple_Viewport___PhoneLib
 
         public void Update(TimeSpan elapsedTime, bool isActive)
         {
+            while (TouchPanel.IsGestureAvailable)
+            {
+                GestureSample gs = TouchPanel.ReadGesture();
+                if(pickedNode != null && pickedNode.Name.Contains("Barrier")){
+                    switch (gs.GestureType)
+                    {
+                        case GestureType.Pinch:
+                            ((TransformNode)pickedNode.Parent).Translation += new Vector3(0,0,gs.Delta.X - gs.Delta2.X);
+                            break;
+
+                        case GestureType.Flick:
+                            ((TransformNode)pickedNode.Parent).Translation += new Vector3(gs.Delta.X/15, -gs.Delta.Y/15, 0);
+                            break;
+                    }
+                }
+            }
             scene.Update(elapsedTime, false, isActive);
         }
 
         public void Draw(TimeSpan elapsedTime)
         {
-            // Reset the XNA viewport to our centered and resized viewport
-            State.Device.Viewport = viewport;
-            // Set the render target for rendering the AR scene
-            scene.SceneRenderTarget = arViewRenderTarget;
-            scene.BackgroundColor = Color.Black;
-            // Set the scene background size to be the size of the AR scene viewport
-            scene.BackgroundBound = arViewRect;
-            // Set the camera to be the AR camera
-            scene.CameraNode = arCameraNode;
-            // Associate the overlaid model with the ground marker for rendering it in AR scene
-            foreach (Node node in scene.RootNode.Children)
+            if (playGame)
             {
-                if (node.Name.Contains("Trans"))
+                // Reset the XNA viewport to our centered and resized viewport
+                State.Device.Viewport = viewport;
+                // Set the render target for rendering the AR scene
+                scene.SceneRenderTarget = arViewRenderTarget;
+                scene.BackgroundColor = Color.Black;
+                // Set the scene background size to be the size of the AR scene viewport
+                scene.BackgroundBound = arViewRect;
+                // Set the camera to be the AR camera
+                scene.CameraNode = arCameraNode;
+                // Associate the overlaid model with the ground marker for rendering it in AR scene
+                try
                 {
-                    foreach (GeometryNode child in ((BranchNode)node).Children)
+                    foreach (Node node in scene.RootNode.Children)
                     {
-                        if (child.Name.Contains("Target") || child.Name.Contains("Barrier") 
-                            || child.Name.Contains("Plane") || child.Name.Contains("Background"))
+                        if (node.Name.Contains("Trans"))
                         {
-                            scene.RootNode.RemoveChild(child.Parent);
-                            groundMarkerNode.AddChild(child.Parent);
+                            foreach (GeometryNode child in ((BranchNode)node).Children)
+                            {
+                                if (child.Name.Contains("Target") || child.Name.Contains("Barrier")
+                                    || child.Name.Contains("Plane") || child.Name.Contains("Background"))
+                                {
+                                    scene.RootNode.RemoveChild(child.Parent);
+                                    groundMarkerNode.AddChild(child.Parent);
+
+                                }
+                            }
                         }
                     }
                 }
-            }
-            // Don't render the marker board and camera representation
-            markerBoardGeom.Enabled = false;
-            vrCameraRepNode.Enabled = false;
-            // Show the video background
-            scene.BackgroundTexture = videoTexture;
-            
-            UI2DRenderer.DrawCircle(new Point(0, 0), 2, Color.Aqua);
-            UI2DRenderer.WriteText(Vector2.Zero, "This is a test", Color.White, textFont);
-            // Render the AR scene
-            scene.Draw(elapsedTime, false);
-            
-            // Set the render target for rendering the VR scene
-            scene.SceneRenderTarget = vrViewRenderTarget;
-            scene.BackgroundColor = Color.CornflowerBlue;
-            // Set the scene background size to be the size of the VR scene viewport
-            scene.BackgroundBound = vrViewRect;
-            // Set the camera to be the VR camera
-            scene.CameraNode = vrCameraNode;
-            // Remove the overlaid model from the ground marker for rendering it in VR scene
-            foreach (Node node in groundMarkerNode.Children)
-            {
-                if (node.Name.Contains("Trans"))
+                catch (NullReferenceException nre)
                 {
-                    foreach (Node child in ((BranchNode)node).Children)
+                    //nothing to see here
+                }
+                // Don't render the marker board and camera representation
+                markerBoardGeom.Enabled = false;
+                vrCameraRepNode.Enabled = false;
+                // Show the video background
+                scene.BackgroundTexture = videoTexture;
+
+                // Render the AR scene
+                scene.Draw(elapsedTime, false);
+
+                // Set the render target for rendering the VR scene
+                scene.SceneRenderTarget = vrViewRenderTarget;
+                scene.BackgroundColor = Color.CornflowerBlue;
+                // Set the scene background size to be the size of the VR scene viewport
+                scene.BackgroundBound = vrViewRect;
+                // Set the camera to be the VR camera
+                scene.CameraNode = vrCameraNode;
+                // Remove the overlaid model from the ground marker for rendering it in VR scene
+                try
+                {
+                    foreach (Node node in groundMarkerNode.Children)
                     {
-                        if (child.Name.Contains("Target") || child.Name.Contains("Barrier") 
-                            || child.Name.Contains("Plane") || child.Name.Contains("Background"))
+                        if (node.Name.Contains("Trans"))
                         {
-                            groundMarkerNode.RemoveChild(child.Parent);
-                            scene.RootNode.AddChild(child.Parent);
+                            foreach (Node child in ((BranchNode)node).Children)
+                            {
+                                if (child.Name.Contains("Target") || child.Name.Contains("Barrier")
+                                    || child.Name.Contains("Plane") || child.Name.Contains("Background"))
+                                {
+                                    groundMarkerNode.RemoveChild(child.Parent);
+                                    scene.RootNode.AddChild(child.Parent);
+                                }
+                            }
                         }
                     }
                 }
+                catch (NullReferenceException nre)
+                {
+                    //nothing to see here
+                }
+                // Render the marker board and camera representation in VR scene
+                markerBoardGeom.Enabled = true;
+                vrCameraRepNode.Enabled = true;
+                // Update the transformation of the camera representation in VR scene based on the
+                // marker array transformation
+                if (groundMarkerNode.MarkerFound)
+                    vrCameraRepTransNode.WorldTransformation = Matrix.Invert(groundMarkerNode.WorldTransformation);
+                // Do not show the video background
+                scene.BackgroundTexture = null;
+                // Re-traverse the scene graph since we have modified it, and render the VR scene 
+                scene.RenderScene(false, true);
+
+                // Adjust the viewport to be centered
+                arViewRect.X += viewport.X;
+                vrViewRect.X += viewport.X;
+
+                // Set the render target back to the frame buffer
+                State.Device.SetRenderTarget(null);
+                State.Device.Clear(Color.Black);
+                // Render the two textures rendered on the render targets
+                State.SharedSpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Opaque);
+                State.SharedSpriteBatch.Draw(arViewRenderTarget, arViewRect, Color.White);
+                State.SharedSpriteBatch.Draw(vrViewRenderTarget, vrViewRect, Color.White);
+                State.SharedSpriteBatch.End();
+
+                Texture2D ch = State.Content.Load<Texture2D>("crosshairs");
+                Vector2 position = new Vector2((viewport.Width / 2) + 80 - (ch.Width / 2), (viewport.Height / 2) - (ch.Height / 2));
+                State.SharedSpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
+                State.SharedSpriteBatch.Draw(ch, position, Color.White);
+                State.SharedSpriteBatch.End();
+
+                if (pickedNode != null && pickedNode.Name.Contains("Barrier"))
+                {
+                    UI2DRenderer.WriteText(new Vector2(0, viewport.Height - 20), "Barrier has been selected", Color.White, textFont);
+                }
+
+                bool noTargets = true;
+                foreach (Node node in scene.RootNode.Children)
+                {
+                    if (node.Name.Contains("Trans"))
+                    {
+                        foreach (GeometryNode child in ((BranchNode)node).Children)
+                        {
+                            if (child.Name.Contains("Target"))
+                            {
+                                noTargets = false;
+                            }
+                        }
+                    }
+                }
+
+                foreach (Node node in groundMarkerNode.Children)
+                {
+                    if (node.Name.Contains("Trans"))
+                    {
+                        foreach (GeometryNode child in ((BranchNode)node).Children)
+                        {
+                            if (child.Name.Contains("Target"))
+                            {
+                                noTargets = false;
+                            }
+                        }
+                    }
+                }
+                if (noTargets)
+                {
+                    Vector2 pos = new Vector2((viewport.Width / 2) + 80 - (winscreen.Width / 2), (viewport.Height / 2) - (winscreen.Height / 2));
+                    State.SharedSpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
+                    State.SharedSpriteBatch.Draw(winscreen, pos, Color.White);
+                    State.SharedSpriteBatch.End();
+                }
+
+                // Reset the adjustments
+                arViewRect.X -= viewport.X;
+                vrViewRect.X -= viewport.X;
             }
-            // Render the marker board and camera representation in VR scene
-            markerBoardGeom.Enabled = true;
-            vrCameraRepNode.Enabled = true;
-            // Update the transformation of the camera representation in VR scene based on the
-            // marker array transformation
-            if (groundMarkerNode.MarkerFound)
-                vrCameraRepTransNode.WorldTransformation = Matrix.Invert(groundMarkerNode.WorldTransformation);
-            // Do not show the video background
-            scene.BackgroundTexture = null;
-            // Re-traverse the scene graph since we have modified it, and render the VR scene 
-            scene.RenderScene(false, true);
+            else
+            {
+                scene.BackgroundTexture = logo;
+                if (viewHelp)
+                {
+                    scene.BackgroundTexture = helpscreen;
+                }
+                if (goBack)
+                {
+                    scene.BackgroundTexture = logo;
+                }
+                scene.Draw(elapsedTime, false);
+            }
+        }
 
-            // Adjust the viewport to be centered
-            arViewRect.X += viewport.X;
-            vrViewRect.X += viewport.X;
+        private void HandleActionPerformed(object source)
+        {
+            G2DComponent comp = (G2DComponent)source;
+            if (comp is G2DButton && comp.Name == "play")
+            {
+                label = "PLAY MODE";
+                playb.Enabled = false;
+                playb.Visible = false;
+                helpb.Enabled = false;
+                helpb.Visible = false;
+                backb.Enabled = false;
+                backb.Visible = false;
+                playGame = true;
+                viewHelp = false;
+                goBack = false;
+            }
 
-            // Set the render target back to the frame buffer
-            State.Device.SetRenderTarget(null);
-            State.Device.Clear(Color.Black);
-            // Render the two textures rendered on the render targets
-            State.SharedSpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Opaque);
-            State.SharedSpriteBatch.Draw(arViewRenderTarget, arViewRect, Color.White);
-            State.SharedSpriteBatch.Draw(vrViewRenderTarget, vrViewRect, Color.White);
-            State.SharedSpriteBatch.End();
+            if (comp is G2DButton && comp.Name == "help")
+            {
+                label = "HELP MODE";
+                playb.Enabled = false;
+                playb.Visible = false;
+                helpb.Enabled = false;
+                helpb.Visible = false;
+                backb.Enabled = true;
+                backb.Visible = true;
+                viewHelp = true;
+                goBack = false;
+                playGame = false;
+            }
 
-            // Reset the adjustments
-            arViewRect.X -= viewport.X;
-            vrViewRect.X -= viewport.X;
-            
+            if (comp is G2DButton && comp.Name == "back")
+            {
+                label = "...";
+                playb.Enabled = true;
+                playb.Visible = true;
+                helpb.Enabled = true;
+                helpb.Visible = true;
+                backb.Enabled = false;
+                backb.Visible = false;
+                viewHelp = false;
+                goBack = true;
+                playGame = false;
+            }
         }
     }
 }

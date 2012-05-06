@@ -1,0 +1,34 @@
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\NyARIdGroundArray.xml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\camera_para.dat
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\Content\p1_wedge.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\Content\wedge_p1_diff_v1_0.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\Tutorial13 - Stereo Rendering - PhoneLib.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\Tutorial13 - Stereo Rendering - PhoneLib.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\GoblinXNA.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\NyARToolkit4.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\NyARToolkitCS.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\MataliPhysics.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\NyARToolkit4.markersystem.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\Nuclex.Fonts.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\GoblinXNA.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\obj\Windows Phone\Debug\Tutorial13 - Stereo Rendering - PhoneLib.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial13 - iWear VR920\obj\Windows Phone\Debug\Tutorial13 - Stereo Rendering - PhoneLib.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\NyARIdGroundArray.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\camera_para.dat
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\Content\p1_wedge.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\Content\wedge_p1_diff_v1_0.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\Tutorial13 - Stereo Rendering - PhoneLib.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\Tutorial13 - Stereo Rendering - PhoneLib.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\GoblinXNA.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\NyARToolkit4.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\NyARToolkitCS.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\MataliPhysics.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\NyARToolkit4.markersystem.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\Nuclex.Fonts.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\bin\Windows Phone\Debug\GoblinXNA.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\obj\Windows Phone\Debug\Tutorial13 - Stereo Rendering - PhoneLib.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial13 - iWear VR920\obj\Windows Phone\Debug\Tutorial13 - Stereo Rendering - PhoneLib.pdb

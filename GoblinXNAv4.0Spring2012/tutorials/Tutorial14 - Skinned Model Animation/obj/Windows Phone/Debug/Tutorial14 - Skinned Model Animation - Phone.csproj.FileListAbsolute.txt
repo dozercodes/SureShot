@@ -1,24 +1,35 @@
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\dude.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\checkerboard.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\head_0.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\jacket_0.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\pants_0.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\upBodyC_0.xnb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial14 - Skinned Model Animation - Phone.dll
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial14 - Skinned Model Animation - Phone.pdb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\Tutorial14 - Skinned Model Animation - Phone.dll
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\Tutorial14 - Skinned Model Animation - Phone.pdb
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\..\..\bin\Windows Phone\AppManifest.xaml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\WMAppManifest.xml.g
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\WMAppManifest.xml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\dude.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\checkerboard.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\head_0.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\jacket_0.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\pants_0.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Content\upBodyC_0.xnb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial14 - Skinned Model Animation - Phone.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\bin\Windows Phone\Tutorial14 - Skinned Model Animation - Phone.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\Tutorial14 - Skinned Model Animation - Phone.dll
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\Tutorial14 - Skinned Model Animation - Phone.pdb
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\..\..\bin\Windows Phone\AppManifest.xaml
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\WMAppManifest.xml
 ..\..\bin\Windows Phone\
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\..\..\bin\Windows Phone\Tutorial14 - Skinned Model Animation - Phone.xap
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\XapCacheFile.xml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\..\..\bin\Windows Phone\Tutorial14 - Skinned Model Animation - Phone.xap
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\XapCacheFile.xml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\..\..\bin\Windows Phone\AppManifest.xaml
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\WMAppManifest.xml.g
-C:\Users\RAID\Documents\Courses\Git Repos\SureShot\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\WMAppManifest.xml
-..\..\bin\Windows Phone\
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\..\..\bin\Windows Phone\Tutorial14 - Skinned Model Animation - Phone.xap
+C:\Users\nicolas\Desktop\GoblinXNAv4.0Spring2012\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\dude.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\checkerboard.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\head_0.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\jacket_0.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\pants_0.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Content\upBodyC_0.xnb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Tutorial14 - Skinned Model Animation - Phone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\bin\Windows Phone\Tutorial14 - Skinned Model Animation - Phone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\Tutorial14 - Skinned Model Animation - Phone.dll
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\Tutorial14 - Skinned Model Animation - Phone.pdb
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\..\..\bin\Windows Phone\AppManifest.xaml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\WMAppManifest.xml
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\..\..\bin\Windows Phone\Tutorial14 - Skinned Model Animation - Phone.xap
+C:\Users\RAID\Downloads\GoblinXNAc4.0\tutorials\Tutorial14 - Skinned Model Animation\obj\Windows Phone\Debug\XapCacheFile.xml

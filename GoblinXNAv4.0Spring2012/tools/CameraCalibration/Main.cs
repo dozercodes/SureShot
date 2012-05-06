@@ -55,7 +55,7 @@ using GoblinXNA.SceneGraph;
 using GoblinXNA.UI;
 using GoblinXNA.UI.UI2D;
 
-//using Microsoft.Research.Kinect.Nui;
+using Microsoft.Research.Kinect.Nui;
 using Camera = GoblinXNA.SceneGraph.Camera;
 
 namespace CameraCalibration

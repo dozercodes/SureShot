@@ -1,5 +1,5 @@
 ﻿/************************************************************************************ 
- * Copyright (c) 2008-2011, Columbia University
+ * Copyright (c) 2008-2012, Columbia University
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -365,6 +365,9 @@ namespace GoblinXNA.Graphics
         /// <param name="renderMatrix">Transform of this model</param>
         public virtual void Render(ref Matrix renderMatrix, Material material)
         {
+            if (customMesh.NumberOfPrimitives == 0)
+                return;
+
             if ((shader.CurrentMaterial != material) || material.HasChanged)
             {
                 shader.SetParameters(material);

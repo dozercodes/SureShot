@@ -116,6 +116,8 @@ namespace Tutorial9___Advanced_Features
             this.Activated += Sound.Instance.GameActivated;
 #endif
 
+            //State.ThreadOption = (ushort)ThreadOptions.MarkerTracking;
+
             // Initialize the scene graph
             scene = new Scene();
 
@@ -200,6 +202,8 @@ namespace Tutorial9___Advanced_Features
 
             // Add a mouse click handler for shooting a box model from the mouse location 
             MouseInput.Instance.MouseClickEvent += new HandleMouseClick(MouseClickHandler);
+
+            State.ThreadOption = (ushort)ThreadOptions.MarkerTracking;
 
             // Show some debug information
             State.ShowFPS = true;
@@ -315,7 +319,7 @@ namespace Tutorial9___Advanced_Features
             Random rand = new Random();
 
             // Create bunch of sphere models and pile them up
-            for (int i = 0; i <= 1; i++)
+            for (int i = 0; i <= 0; i++)
             {
                 for (int j = -1; j <= 1; j++)
                 {
@@ -504,6 +508,15 @@ namespace Tutorial9___Advanced_Features
             }
 
             scene.Draw(gameTime.ElapsedGameTime, gameTime.IsRunningSlowly);
+
+            Texture2D ch = Content.Load<Texture2D>("crosshairs");
+            Vector2 position = new Vector2(scene.BackgroundBound.Width/2, scene.BackgroundBound.Height / 2); //hard-coded crosshairs position
+            Notifier.AddMessage((scene.BackgroundBound.Width / 2) + " " + (scene.BackgroundBound.Height / 2));
+            //how it should work:
+            //Vector2 position = new Vector2(State.Width / 2, State.Height / 2);
+            State.SharedSpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
+            State.SharedSpriteBatch.Draw(ch, position, Color.White);
+            State.SharedSpriteBatch.End();
         }
 
         /// <summary>
